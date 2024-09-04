@@ -23,6 +23,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'static.tildacdn.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.argentinacabanas.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ejemplo.com',
+      },
 
     ],
   },

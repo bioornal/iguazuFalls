@@ -1,117 +1,15 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
-import { Button } from "@/components/ui/Button"
-import { Input } from "@/components/ui/Input"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/Dialog"
+import { useState, useEffect } from 'react'
+
 import { Leaf, MapPin, Calendar, Phone, Wifi, Coffee, Tv, Menu, X, Users, Maximize2, Star, TreePine, Bird, Building, Zap, Flag } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from 'framer-motion'
 import ContactForm from '../components/formContacto.jsx'
 import HeroSection from '../components/HeroSection.jsx'
+import Cabins from '../components/Cabins.jsx'
 
-const cabins = [
-  {
-    id: 1,
-    name: "Cabaña Tropical 1",
-    description: "Una acogedora cabaña para dos personas con vista a la selva.",
-    capacity: "2 personas",
-    size: "30 m²",
-    rating: 4.5,
-    amenities: ["Wi-Fi", "Aire acondicionado", "Terraza privada", "Cafetera"]
-  },
-  {
-    id: 2,
-    name: "Cabaña Familiar",
-    description: "Espaciosa cabaña ideal para familias, con área de juegos para niños.",
-    capacity: "4-6 personas",
-    size: "60 m²",
-    rating: 4.8,
-    amenities: ["Wi-Fi", "Cocina completa", "Área de juegos", "TV por cable"]
-  },
-  {
-    id: 3,
-    name: "Suite Lujo Selvático",
-    description: "Nuestra cabaña más lujosa con jacuzzi privado y vistas panorámicas.",
-    capacity: "2 personas",
-    size: "45 m²",
-    rating: 5.0,
-    amenities: ["Wi-Fi", "Jacuzzi privado", "Servicio a la habitación", "Minibar"]
-  },
-  {
-    id: 4,
-    name: "Cabaña Río",
-    description: "Hermosa cabaña con vistas al río y acceso directo a la orilla.",
-    capacity: "3 personas",
-    size: "40 m²",
-    rating: 4.7,
-    amenities: ["Wi-Fi", "Terraza con vista al río", "Kayak incluido", "Parrilla"]
-  },
-  {
-    id: 5,
-    name: "Cabaña del Bosque",
-    description: "Cabaña rústica inmersa en el corazón del bosque para los amantes de la naturaleza.",
-    capacity: "2-4 personas",
-    size: "50 m²",
-    rating: 4.6,
-    amenities: ["Estufa a leña", "Observatorio de aves", "Senderos privados", "Ducha al aire libre"]
-  },
-  {
-    id: 6,
-    name: "Suite Luna de Miel",
-    description: "Romántica suite perfecta para parejas en su luna de miel o aniversario.",
-    capacity: "2 personas",
-    size: "55 m²",
-    rating: 4.9,
-    amenities: ["Cama king size", "Bañera de hidromasaje", "Champagne de bienvenida", "Desayuno en la cama"]
-  },
-  {
-    id: 7,
-    name: "Cabaña Aventura",
-    description: "Diseñada para los amantes de la aventura, con equipo de trekking incluido.",
-    capacity: "4 personas",
-    size: "45 m²",
-    rating: 4.7,
-    amenities: ["Equipo de trekking", "Mapas de senderos", "Terraza panorámica", "Ducha de alta presión"]
-  },
-  {
-    id: 8,
-    name: "Eco-Cabaña",
-    description: "Cabaña ecológica autosustentable, perfecta para los conscientes del medio ambiente.",
-    capacity: "2-3 personas",
-    size: "35 m²",
-    rating: 4.8,
-    amenities: ["Paneles solares", "Recolección de agua de lluvia", "Compostaje", "Productos orgánicos"]
-  },
-  {
-    id: 9,
-    name: "Cabaña Gran Familia",
-    description: "Amplia cabaña para grupos grandes o familias extendidas.",
-    capacity: "8-10 personas",
-    size: "100 m²",
-    rating: 4.6,
-    amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"]
-  },
-  {
-    id: 10,
-    name: "Cabaña Otro Nombre",
-    description: "Amplia cabaña para grupos grandes o familias extendidas.",
-    capacity: "8-10 personas",
-    size: "100 m²",
-    rating: 4.6,
-    amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"]
-  },
-  {
-    id: 11,
-    name: "Cabaña Otro Nombre 2",
-    description: "Amplia cabaña para grupos grandes o familias extendidas.",
-    capacity: "8-10 personas",
-    size: "100 m²",
-    rating: 4.6,
-    amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"]
-  }
-]
 
 const attractions = [
   {
@@ -161,45 +59,6 @@ const attractions = [
 export default function Page() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [openModal, setOpenModal] = useState(null)
-  const [zoomedImage, setZoomedImage] = useState(null)
-  const zoomRef = useRef(null)
-
-  useEffect(() => {
-    const handleEscape = (event) => {
-      if (event.key === 'Escape') {
-        setZoomedImage(null)
-      }
-    }
-    window.addEventListener('keydown', handleEscape)
-    return () => window.removeEventListener('keydown', handleEscape)
-  }, [])
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (zoomRef.current && zoomedImage) {
-        const { left, top, width, height } = zoomRef.current.getBoundingClientRect()
-        const x = (e.clientX - left) / width
-        const y = (e.clientY - top) / height
-        zoomRef.current.style.transformOrigin = `${x * 100}% ${y * 100}%`
-      }
-    }
-
-    document.addEventListener('mousemove', handleMouseMove)
-    return () => document.removeEventListener('mousemove', handleMouseMove)
-  }, [zoomedImage])
-
-  const handleImageMouseDown = (src) => {
-    setZoomedImage(src)
-  }
-
-  const handleImageMouseUp = () => {
-    setZoomedImage(null)
-  }
-
-  const getRandomImages = (id, count) => {
-    return Array(count).fill(0).map((_, index) => `https://picsum.photos/400/300?random=${id}_${index}`)
-  }
 
 
   useEffect(() => {
@@ -303,134 +162,7 @@ export default function Page() {
           </div>
         </motion.section>
 
-        <section id="cabins" className="w-full py-12 md:py-24 lg:py-32 bg-white">
-          <div className="container px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-green-800">Nuestras Cabañas</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {cabins.map((cabin) => {
-                const cabinImages = getRandomImages(cabin.id, 5)
-                return (
-                  <div key={cabin.id} className="rounded-lg overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-xl">
-                    <div className="relative cursor-pointer" onClick={() => setOpenModal(cabin.id)}>
-                      <Image
-                        src={cabinImages[0]}
-                        alt={cabin.name}
-                        width={400}
-                        height={300}
-                        className="w-full h-48 object-cover"
-                      />
-                      <div className="absolute top-0 right-0 bg-yellow-500 text-green-900 px-2 py-1 text-xs font-semibold rounded-bl-lg">
-                        {cabin.rating} ★
-                      </div>
-                    </div>
-                    <div className="p-4">
-                      <h3 className="font-semibold text-lg text-green-800">{cabin.name}</h3>
-                      <p className="text-gray-600 text-sm mt-1">{cabin.description}</p>
-                      <div className="flex justify-between items-center mt-2 text-sm text-gray-600">
-                        <span>{cabin.capacity}</span>
-                        <span>{cabin.size}</span>
-                      </div>
-                      <Button
-                        className="w-full mt-4 bg-green-600 hover:bg-green-500 text-white"
-                        onClick={() => setOpenModal(cabin.id)}
-                      >
-                        Ver Detalles
-                      </Button>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Modal para detalles de la cabaña */}
-        {cabins.map((cabin) => (
-          <Dialog key={cabin.id} open={openModal === cabin.id} onOpenChange={(isOpen) => setOpenModal(isOpen ? cabin.id : null)}>
-            <DialogContent className="sm:max-w-[600px]">
-              <DialogHeader>
-                <DialogTitle>{cabin.name}</DialogTitle>
-                <DialogDescription>{cabin.description}</DialogDescription>
-              </DialogHeader>
-              <div className="grid gap-4 py-4">
-                <div className="grid grid-cols-2 items-center gap-4">
-                  <span className="font-semibold">Capacidad:</span>
-                  <span>{cabin.capacity}</span>
-                </div>
-                <div className="grid grid-cols-2 items-center gap-4">
-                  <span className="font-semibold">Tamaño:</span>
-                  <span>{cabin.size}</span>
-                </div>
-                <div>
-                  <span className="font-semibold">Amenidades:</span>
-                  <ul className="list-disc list-inside mt-2">
-                    {cabin.amenities.map((amenity, index) => (
-                      <li key={index} className="flex items-center">
-                        {amenity === 'Wi-Fi' && <Wifi className="mr-2 h-4 w-4" />}
-                        {amenity === 'Cafetera' && <Coffee className="mr-2 h-4 w-4" />}
-                        {amenity === 'TV por cable' && <Tv className="mr-2 h-4 w-4" />}
-                        {amenity}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="mt-4 relative">
-                <h4 className="font-semibold mb-2">Galería de imágenes:</h4>
-                <div className="flex overflow-x-auto space-x-2 pb-2">
-                  {getRandomImages(cabin.id, 5).map((src, index) => (
-                    <div
-                      key={index}
-                      className="relative cursor-pointer"
-                      onMouseDown={() => handleImageMouseDown(src)}
-                      onMouseUp={handleImageMouseUp}
-                      onMouseLeave={handleImageMouseUp}
-                    >
-                      <Image
-                        src={src}
-                        alt={`${cabin.name} imagen ${index + 1}`}
-                        width={100}
-                        height={75}
-                        className="object-cover transition-transform duration-200 ease-in-out"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <Button onClick={() => setOpenModal(null)}>Cerrar</Button>
-            </DialogContent>
-            {zoomedImage && (
-              <div className="fixed inset-0 z-[60] overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-black bg-opacity-10 transition-opacity duration-300"
-                  onClick={handleImageMouseUp}
-                ></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div
-                    ref={zoomRef}
-                    className="relative w-[80vw] h-[80vh] max-w-3xl max-h-[600px] overflow-hidden rounded-lg"
-                    onMouseUp={handleImageMouseUp}
-                    onMouseLeave={handleImageMouseUp}
-                  >
-                    <Image
-                      src={zoomedImage}
-                      alt="Imagen ampliada"
-                      layout="fill"
-                      objectFit="contain"
-                      className="transition-transform duration-200 ease-in-out transform scale-100 hover:scale-150"
-                    />
-                    <button
-                      className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors duration-200"
-                      onClick={handleImageMouseUp}
-                    >
-                      <X className="h-6 w-6 text-gray-800" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-          </Dialog>
-        ))}
+<Cabins />
 
         <motion.section
           initial={{ y: 50, opacity: 0 }}
