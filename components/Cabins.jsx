@@ -18,8 +18,9 @@ const cabins = [
         images: [
             {
                 id: 1,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/1.jpg"
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/9.jpg"
             },
+
             {
                 id: 2,
                 url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/2.jpg"
@@ -50,7 +51,7 @@ const cabins = [
             },
             {
                 id: 9,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/9.jpg"
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/1.jpg"
             },
             {
                 id: 10,
@@ -182,13 +183,13 @@ const cabins = [
     }
 ].map(cabin => ({
     ...cabin,
-    images: cabin.images && cabin.images.length > 0 
-      ? cabin.images 
-      : [{ id: 'default', url: defaultImage }]
-  }));
+    images: cabin.images && cabin.images.length > 0
+        ? cabin.images
+        : [{ id: 'default', url: defaultImage }]
+}));
 
 
-  function Cabins() {
+function Cabins() {
     const [openModal, setOpenModal] = useState(null)
 
     const handleOpenModal = (cabinId) => {
