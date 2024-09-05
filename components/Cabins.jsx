@@ -153,7 +153,21 @@ const cabins = [
         capacity: "2 personas",
         size: "45 m²",
         rating: 5.0,
-        amenities: ["Wi-Fi", "Jacuzzi privado", "Servicio a la habitación", "Minibar"]
+        amenities: ["Wi-Fi", "Jacuzzi privado", "Servicio a la habitación", "Minibar"],
+        images: [
+            {
+                id: 1,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0037.jpg"
+            },
+            {
+                id: 2,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0036.jpg"
+            },
+            {
+                id: 3,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0038.jpg"
+            }
+        ]
     },
     {
         id: 4,
