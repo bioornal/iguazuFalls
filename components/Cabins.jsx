@@ -98,7 +98,53 @@ const cabins = [
         capacity: "4-6 personas",
         size: "60 m²",
         rating: 4.8,
-        amenities: ["Wi-Fi", "Cocina completa", "Área de juegos", "TV por cable"]
+        amenities: ["Wi-Fi", "Cocina completa", "Área de juegos", "TV por cable"],
+        images: [
+            {
+                id: 1,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0022.jpg"
+            },
+            {
+                id: 2,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0024.jpg"
+            },
+            {
+                id: 3,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0025.jpg"
+            },
+            {
+                id: 4,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0026.jpg"
+            },
+            {
+                id: 5,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0027.jpg"
+            },
+            {
+                id: 6,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0029.jpg"
+            },
+            {
+                id: 7,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0030.jpg"
+            },
+            {
+                id: 8,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0031.jpg"
+            },
+            {
+                id: 9,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0032.jpg"
+            },
+            {
+                id: 10,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0033.jpg"
+            },
+            {
+                id: 11,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0034.jpg"
+            }
+        ]
     },
     {
         id: 3,
