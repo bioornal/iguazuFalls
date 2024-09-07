@@ -153,7 +153,7 @@ export default function ContactForm() {
                   title="Mapa de ubicación de Iguazú Falls Duplex & Lodge"
                 ></iframe>
               </div>
-              <p className="text-sm">Estamos ubicados a solo 20 minutos de las majestuosas Cataratas del Iguazú, en un entorno natural privilegiado.</p>
+
             </div>
           </div>
         </div>
