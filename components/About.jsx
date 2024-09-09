@@ -19,11 +19,11 @@ export default function About() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       id="about"
-      className="w-full py-16 md:py-24 lg:py-32 bg-gradient-to-b from-green-50 to-white"
+      className="w-full py-12 md:py-16 lg:py-20 bg-gradient-to-b from-green-50 to-white"
     >
       <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-green-800">
-          Sobre Nosotros
+        <h2 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-12 text-green-800">
+          Iguazu Falls Duplex & Lodge
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           <motion.div
@@ -32,10 +32,11 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="lg:col-span-2 space-y-6"
           >
-            <p className="text-lg text-gray-700 mb-6">
-              Bienvenidos a Iguazu Falls Duplex & Lodge, su refugio de tranquilidad en medio de la exuberante selva misionera. 
-              Fundado en 2015 por la familia Rodríguez, nuestro lodge nació del sueño de compartir la belleza natural de Misiones 
-              con viajeros de todo el mundo.
+            <p className="text-lg text-gray-700 mb-6 text-justify">
+              Iguazu Falls Duplex & Lodge es un refugio único ubicado a pocos minutos de las imponentes Cataratas del Iguazú. Cada una de nuestras cabañas ha sido diseñada con un toque rústico y moderno, brindando comodidad y elegancia en un entorno natural incomparable. Todas cuentan con Wi-Fi gratuito y equipamiento premium para que disfrutes de una estancia placentera.
+            </p>
+            <p className="text-lg text-gray-700 mb-6 text-justify">
+              Además de las acogedoras cabañas, ofrecemos una piscina al aire libre, creando el ambiente perfecto para relajarte.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {features.map((item, index) => (
@@ -51,7 +52,6 @@ export default function About() {
                 </motion.div>
               ))}
             </div>
-
           </motion.div>
           <motion.div
             initial={{ x: 50, opacity: 0 }}

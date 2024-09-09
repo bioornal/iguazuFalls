@@ -37,7 +37,7 @@ return (
       />
       <span className={`ml-4 text-xl font-semibold ${isScrolled ? 'text-green-800' : 'text-white'
         }`}>
-        Iguazu Falls Duplex & Lodge
+        
       </span>
     </Link>
     <div className="flex items-center space-x-6">
@@ -61,7 +61,7 @@ return (
       <button
         onClick={openWhatsApp}
         className={`transition-all duration-300 px-6 py-2 rounded-full ${isScrolled
-          ? 'bg-yellow-500 text-green-900 hover:bg-yellow-400'
+          ? 'bg-green-800 text-white hover:bg-green-600'
           : 'bg-white bg-opacity-20 text-white hover:bg-opacity-30'
           } border border-white`}
       >

@@ -277,9 +277,11 @@ function Cabins() {
     }
 
     return (
-        <section id="cabins" className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        <section id="cabins" className="w-full py-12 md:py-16 lg:py-20 bg-white">
             <div className="container px-4 md:px-6 mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-green-800">Nuestras Cabañas</h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-12 text-green-800">
+                    Cuartos y Suites
+                </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {cabins.map((cabin) => (
                         <div key={cabin.id} className="rounded-lg overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-xl">
