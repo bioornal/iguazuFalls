@@ -54,36 +54,43 @@ const attractions = [
       url: "https://cataratasdoiguacu.com.br/"
     }
   ];
-
-function Atracttions() {
-  return (
-    <motion.section
-    initial={{ y: 50, opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.5 }}
-    id="attractions"
-    className="w-full py-12 md:py-24 lg:py-32 bg-green-50"
-  >
-    <div className="container px-4 md:px-6 mx-auto">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-green-800">Atracciones Cercanas</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        {attractions.map((attraction, index) => (
-          <Link href={attraction.url} key={index} target="_blank" rel="noopener noreferrer">
-            <div className="flex flex-col items-center space-y-2 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-              {attraction.icon}
-              <h3 className="font-bold text-lg sm:text-xl text-green-800 text-center">{attraction.name}</h3>
-              <p className="text-gray-700 text-sm sm:text-base text-center">{attraction.description}</p>
-              <div className="flex items-center mt-2 text-green-600">
-                <MapPin className="w-4 h-4 mr-1" />
-                <span className="text-sm">{attraction.distance}</span>
+  function Attractions() {
+    return (
+      <motion.section
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        id="attractions"
+        className="w-full py-12 md:py-24 lg:py-32 bg-white"
+      >
+        <div className="container px-4 md:px-6 mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-12 text-green-800">
+        Atracciones Cercanas
+        </h2>
+          <div className="space-y-8">
+            {attractions.map((attraction, index) => (
+              <div key={index} className={`flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-md ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                <div className="md:w-1/2 h-64 bg-gray-300">
+                  {/* Placeholder for image */}
+                  <div className="w-full h-full flex items-center justify-center text-gray-500">
+                    Image Placeholder
+                  </div>
+                </div>
+                <div className="md:w-1/2 p-6 flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-bold text-xl text-blue-600 mb-2">{attraction.name}</h3>
+                    <p className="text-gray-600 mb-4">{attraction.description}</p>
+                  </div>
+                  <Link href={attraction.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                    Saber mais
+                  </Link>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  </motion.section>
-  )
-}
-
-export default Atracttions
+            ))}
+          </div>
+        </div>
+      </motion.section>
+    )
+  }
+  
+  export default Attractions

@@ -44,7 +44,7 @@ return (
       <nav className="hidden lg:flex gap-6">
         {[
           { name: 'Sobre Nosotros', href: '#about' },
-          { name: 'Cabañas', href: '#cabins' },
+          { name: 'Lodges', href: '#cabins' },
           { name: 'Atracciones', href: '#attractions' },
           { name: 'Contacto', href: '#contact' }
         ].map((item) => (

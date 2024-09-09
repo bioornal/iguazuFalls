@@ -92,7 +92,7 @@ export default function ContactForm() {
                   <div className="bg-yellow-500 p-2 rounded-full">
                     <Calendar className="h-6 w-6 text-green-900" />
                   </div>
-                  <span>Check-in: 14:00 - Check-out: 11:00</span>
+                  <span>Check-in: 14:00 - Check-out: 10:00</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="bg-yellow-500 p-2 rounded-full">
@@ -104,7 +104,7 @@ export default function ContactForm() {
                   <div className="bg-yellow-500 p-2 rounded-full">
                     <HelpCircle className="h-6 w-6 text-green-900" />
                   </div>
-                  <span>Servicio de conserjería 24/7</span>
+                  <span>Servicio de atención permanente</span>
                 </div>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function ContactForm() {
                   <div className="bg-yellow-500 p-2 rounded-full">
                     <Phone className="h-6 w-6 text-green-900" />
                   </div>
-                  <span>+54 3757 123456</span>
+                  <span>+54 3757 570534</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="bg-yellow-500 p-2 rounded-full">
@@ -135,7 +135,7 @@ export default function ContactForm() {
                   <div className="bg-yellow-500 p-2 rounded-full">
                     <Clock className="h-6 w-6 text-green-900" />
                   </div>
-                  <span>Lun - Dom: 9:00 AM - 8:00 PM</span>
+                  <span>Lun - Dom: 7:00 AM - 10:00 PM</span>
                 </div>
               </div>
             </div>

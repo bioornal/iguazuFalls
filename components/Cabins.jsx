@@ -9,12 +9,12 @@ const defaultImage = "https://via.placeholder.com/400x300?text=No+Image+Availabl
 const cabins = [
     {
         id: 1,
-        name: "Cabaña Tropical 1",
-        description: "Una acogedora cabaña para dos personas con vista a la selva.",
-        capacity: "2 personas",
+        name: "Lodge Familiar 1",
+        description: "Departamento acogedor de dos habitaciones",
+        capacity: "2 a 4 personas",
         size: "30 m²",
         rating: 4.5,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Terraza privada", "Cafetera"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta", "TV por cable"],
         images: [
             {
                 id: 1,
@@ -93,12 +93,96 @@ const cabins = [
     },
     {
         id: 2,
-        name: "Cabaña Familiar",
-        description: "Espaciosa cabaña ideal para familias, con área de juegos para niños.",
-        capacity: "4-6 personas",
-        size: "60 m²",
+        name: "Lodge Familiar 2",
+        description: "Departamento acogedor de dos habitaciones",
+        capacity: "2 a 4 personas",
+        size: "30 m²",
+        rating: 4.5,
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta","TV por cable"],
+        images: [
+            {
+                id: 1,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/9.jpg"
+            },
+
+            {
+                id: 2,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/2.jpg"
+            },
+            {
+                id: 3,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/3.jpg"
+            },
+            {
+                id: 4,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/4.jpg"
+            },
+            {
+                id: 5,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/5.jpg"
+            },
+            {
+                id: 6,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/6.jpg"
+            },
+            {
+                id: 7,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/7.jpg"
+            },
+            {
+                id: 8,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/8.jpg"
+            },
+            {
+                id: 9,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/1.jpg"
+            },
+            {
+                id: 10,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/10.jpg"
+            },
+            {
+                id: 11,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/11.jpg"
+            },
+            {
+                id: 12,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/12.jpg"
+            },
+            {
+                id: 13,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/13.jpg"
+            },
+            {
+                id: 14,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/14.jpg"
+            },
+            {
+                id: 15,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/15.jpg"
+            },
+            {
+                id: 16,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/16.jpg"
+            },
+            {
+                id: 17,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/17.jpg"
+            },
+            {
+                id: 18,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/18.jpg"
+            },
+        ]
+    },
+    {
+        id: 3,
+        name: "Studio",
+        description: "Monoambiente",
+        capacity: "1 a 4 personas",
+        size: "30 m²",
         rating: 4.8,
-        amenities: ["Wi-Fi", "Cocina completa", "Área de juegos", "TV por cable"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina completa", "Baño privado", "TV por cable", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 1: 1 sofá cama",],
         images: [
             {
                 id: 1,
@@ -147,13 +231,13 @@ const cabins = [
         ]
     },
     {
-        id: 3,
-        name: "Suite Lujo Selvático",
-        description: "Nuestra cabaña más lujosa con jacuzzi privado y vistas panorámicas.",
-        capacity: "2 personas",
-        size: "45 m²",
+        id: 4,
+        name: "Lodge",
+        description: "Departamento acogedor de una habitación.",
+        capacity: "1 a 4 personas",
+        size: "30 m²",
         rating: 5.0,
-        amenities: ["Wi-Fi", "Jacuzzi privado", "Servicio a la habitación", "Minibar"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina completa", "Baño privado", "TV por cable", "Dormitorio 1: 1 cama doble grande King", "Sala: 1 sofá cama",],
         images: [
             {
                 id: 1,
@@ -186,7 +270,7 @@ const cabins = [
         ]
     },
     {
-        id: 4,
+        id: 5,
         name: "Cabaña Río",
         description: "Hermosa cabaña con vistas al río y acceso directo a la orilla.",
         capacity: "3 personas",
@@ -195,7 +279,7 @@ const cabins = [
         amenities: ["Wi-Fi", "Terraza con vista al río", "Kayak incluido", "Parrilla"]
     },
     {
-        id: 5,
+        id: 6,
         name: "Cabaña del Bosque",
         description: "Cabaña rústica inmersa en el corazón del bosque para los amantes de la naturaleza.",
         capacity: "2-4 personas",
@@ -204,7 +288,7 @@ const cabins = [
         amenities: ["Estufa a leña", "Observatorio de aves", "Senderos privados", "Ducha al aire libre"]
     },
     {
-        id: 6,
+        id: 7,
         name: "Suite Luna de Miel",
         description: "Romántica suite perfecta para parejas en su luna de miel o aniversario.",
         capacity: "2 personas",
@@ -213,7 +297,7 @@ const cabins = [
         amenities: ["Cama king size", "Bañera de hidromasaje", "Champagne de bienvenida", "Desayuno en la cama"]
     },
     {
-        id: 7,
+        id: 8,
         name: "Cabaña Aventura",
         description: "Diseñada para los amantes de la aventura, con equipo de trekking incluido.",
         capacity: "4 personas",
@@ -222,7 +306,7 @@ const cabins = [
         amenities: ["Equipo de trekking", "Mapas de senderos", "Terraza panorámica", "Ducha de alta presión"]
     },
     {
-        id: 8,
+        id: 9,
         name: "Eco-Cabaña",
         description: "Cabaña ecológica autosustentable, perfecta para los conscientes del medio ambiente.",
         capacity: "2-3 personas",
@@ -231,7 +315,7 @@ const cabins = [
         amenities: ["Paneles solares", "Recolección de agua de lluvia", "Compostaje", "Productos orgánicos"]
     },
     {
-        id: 9,
+        id: 10,
         name: "Cabaña Gran Familia",
         description: "Amplia cabaña para grupos grandes o familias extendidas.",
         capacity: "8-10 personas",
@@ -240,7 +324,7 @@ const cabins = [
         amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"]
     },
     {
-        id: 10,
+        id: 11,
         name: "Cabaña Otro Nombre",
         description: "Amplia cabaña para grupos grandes o familias extendidas.",
         capacity: "8-10 personas",
@@ -248,15 +332,7 @@ const cabins = [
         rating: 4.6,
         amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"]
     },
-    {
-        id: 11,
-        name: "Cabaña Otro Nombre 2",
-        description: "Amplia cabaña para grupos grandes o familias extendidas.",
-        capacity: "8-10 personas",
-        size: "100 m²",
-        rating: 4.6,
-        amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"]
-    }
+
 ].map(cabin => ({
     ...cabin,
     images: cabin.images && cabin.images.length > 0
@@ -280,7 +356,7 @@ function Cabins() {
         <section id="cabins" className="w-full py-12 md:py-16 lg:py-20 bg-white">
             <div className="container px-4 md:px-6 mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-12 text-green-800">
-                    Cuartos y Suites
+                    Duplex & Lodges
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {cabins.map((cabin) => (

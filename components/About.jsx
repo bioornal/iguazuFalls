@@ -1,16 +1,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Leaf, MapPin, Star, Home, Users, Coffee } from "lucide-react"
+import { Leaf, MapPin, Star, Home, Users, Car } from "lucide-react"
 import Image from "next/image"
 
 export default function About() {
   const features = [
-    { icon: Leaf, text: "Experiencia única en el corazón de la selva misionera" },
+    { icon: Leaf, text: "Experiencia única a minutos de la selva misionera" },
     { icon: MapPin, text: "Ubicación estratégica a solo 20 minutos de las Cataratas del Iguazú" },
-    { icon: Star, text: "Confort moderno en armonía con la belleza natural" },
-    { icon: Home, text: "Alojamientos espaciosos y bien equipados para familias y grupos" },
+    { icon: Star, text: "Modernidad y simplicidad en ambientes relajados" },
+    { icon: Home, text: "Alojamientos bien equipados para parejas, familias y grupos" },
     { icon: Users, text: "Atención personalizada y cálida de nuestro equipo local" },
-    { icon: Coffee, text: "Desayuno regional incluido con productos locales" }
+    { icon: Car, text: "Departamentos familiares con garage para tu tranquilidad" }
   ]
 
   return (
@@ -33,10 +33,10 @@ export default function About() {
             className="lg:col-span-2 space-y-6"
           >
             <p className="text-lg text-gray-700 mb-6 text-justify">
-              Iguazu Falls Duplex & Lodge es un refugio único ubicado a pocos minutos de las imponentes Cataratas del Iguazú. Cada una de nuestras cabañas ha sido diseñada con un toque rústico y moderno, brindando comodidad y elegancia en un entorno natural incomparable. Todas cuentan con Wi-Fi gratuito y equipamiento premium para que disfrutes de una estancia placentera.
+              Iguazu Falls Duplex & Lodge es un refugio encantador ubicado a pocos minutos de las imponentes Cataratas del Iguazú. Cada una de nuestros departamentos ha sido diseñado con un toque elegante y moderno, brindando comodidad y confort en la ciudad natural incomparable de Iguazú. Todos cuentan con Wi-Fi gratuito y equipamiento premium para que disfrutes de una estancia placentera.
             </p>
             <p className="text-lg text-gray-700 mb-6 text-justify">
-              Además de las acogedoras cabañas, ofrecemos una piscina al aire libre, creando el ambiente perfecto para relajarte.
+              Además de los acogedoras departamentos, ofrecemos una piscina al aire libre, creando el ambiente perfecto para relajarte.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {features.map((item, index) => (
