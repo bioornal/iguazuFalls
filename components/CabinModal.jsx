@@ -69,7 +69,7 @@ export default function CabinModal({ cabin, onClose }) {
   }
 
   return (
-    <DialogContent className="sm:max-w-[1000px] max-h-[80vh] overflow-y-auto p-0">
+    <DialogContent className="sm:max-w-[1000px] max-h-[80vh] overflow-y-auto p-0 font-sans">
       <div className="flex flex-col lg:flex-row">
         {/* Columna izquierda: Galería de imágenes */}
         <div className="lg:w-[63%] p-6">
