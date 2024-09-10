@@ -17,6 +17,7 @@
   body {
     @apply font-sans text-base text-gray-800;
     font-family: var(--font-family);
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -37,6 +38,18 @@
   p {
     @apply mb-4 font-light;
   }
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px; /* Ajusta según sea necesario */
 }
 
 /* Aquí puedes agregar estilos globales adicionales si los necesitas */

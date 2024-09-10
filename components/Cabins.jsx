@@ -360,7 +360,7 @@ function Cabins() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {cabins.map((cabin) => (
-                <div key={cabin.id} className="rounded-lg overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-xl">
+                <div key={cabin.id} className="rounded-lg overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-xl flex flex-col h-full">
                   <div className="relative cursor-pointer" onClick={() => handleOpenModal(cabin.id)}>
                     <Image
                       src={cabin.images[0]?.url || defaultImage}
@@ -369,13 +369,13 @@ function Cabins() {
                       height={300}
                       className="w-full h-48 object-cover"
                     />
-                    <div className="absolute top-0 right-0 bg-yellow-500 text-green-900 px-2 py-1 text-xs font-semibold rounded-bl-lg">
+                    <div className="absolute top-0 right-0 bg-green-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">
                       {cabin.rating} ★
                     </div>
                   </div>
-                  <div className="p-4">
+                  <div className="p-4 flex flex-col flex-grow">
                     <h3 className="subsection-title">{cabin.name}</h3>
-                    <p className="text-sm mt-1">{cabin.description}</p>
+                    <p className="text-sm mt-1 flex-grow">{cabin.description}</p>
                     <div className="flex justify-between items-center mt-2 text-sm">
                       <span>{cabin.capacity}</span>
                       <span>{cabin.size}</span>
