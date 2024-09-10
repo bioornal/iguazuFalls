@@ -28,8 +28,8 @@ export default function ContactForm() {
   return (
     <div className="w-full bg-gradient-to-br from-green-800 to-green-900 text-white py-12 ">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8 text-gray-200">
-          Contacto y ubicación
+      <h2 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-12 text-white">
+         Contacto y ubicación
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Formulario de contacto */}
