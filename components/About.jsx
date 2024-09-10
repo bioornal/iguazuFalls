@@ -22,7 +22,7 @@ export default function About() {
       className="w-full py-12 md:py-16 lg:py-20 bg-gradient-to-b from-green-50 to-white"
     >
       <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-12 text-green-800">
+        <h2 className="section-title">
           Iguazu Falls Duplex & Lodge
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
@@ -32,10 +32,10 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="lg:col-span-2 space-y-6"
           >
-            <p className="text-lg text-gray-700 mb-6 text-justify">
+            <p>
               Iguazu Falls Duplex & Lodge es un refugio encantador ubicado a pocos minutos de las imponentes Cataratas del Iguazú. Cada una de nuestros departamentos ha sido diseñado con un toque elegante y moderno, brindando comodidad y confort en la ciudad natural incomparable de Iguazú. Todos cuentan con Wi-Fi gratuito y equipamiento premium para que disfrutes de una estancia placentera.
             </p>
-            <p className="text-lg text-gray-700 mb-6 text-justify">
+            <p>
               Además de los acogedoras departamentos, ofrecemos una piscina al aire libre, creando el ambiente perfecto para relajarte.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -48,7 +48,7 @@ export default function About() {
                   className="flex items-start space-x-4 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 >
                   <item.icon className="text-green-600 w-6 h-6 flex-shrink-0" />
-                  <p className="text-gray-700">{item.text}</p>
+                  <p>{item.text}</p>
                 </motion.div>
               ))}
             </div>
@@ -68,7 +68,7 @@ export default function About() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-white">
-              <h3 className="text-2xl font-bold mb-2">Iguazu Falls Duplex & Lodge</h3>
+              <h3 className="subsection-title text-white mb-2">Iguazu Falls Duplex & Lodge</h3>
               <p className="text-sm">Su hogar en el paraíso natural de Misiones</p>
             </div>
           </motion.div>

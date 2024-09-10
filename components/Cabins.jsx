@@ -354,43 +354,43 @@ function Cabins() {
 
     return (
         <section id="cabins" className="w-full py-12 md:py-16 lg:py-20 bg-white">
-            <div className="container px-4 md:px-6 mx-auto">
-                <h2 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-12 text-green-800">
-                    Duplex & Lodges
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {cabins.map((cabin) => (
-                        <div key={cabin.id} className="rounded-lg overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-xl">
-                            <div className="relative cursor-pointer" onClick={() => handleOpenModal(cabin.id)}>
-                                <Image
-                                    src={cabin.images[0]?.url || defaultImage}
-                                    alt={cabin.name}
-                                    width={400}
-                                    height={300}
-                                    className="w-full h-48 object-cover"
-                                />
-                                <div className="absolute top-0 right-0 bg-yellow-500 text-green-900 px-2 py-1 text-xs font-semibold rounded-bl-lg">
-                                    {cabin.rating} ★
-                                </div>
-                            </div>
-                            <div className="p-4">
-                                <h3 className="font-semibold text-lg text-green-800">{cabin.name}</h3>
-                                <p className="text-gray-600 text-sm mt-1">{cabin.description}</p>
-                                <div className="flex justify-between items-center mt-2 text-sm text-gray-600">
-                                    <span>{cabin.capacity}</span>
-                                    <span>{cabin.size}</span>
-                                </div>
-                                <Button
-                                    className="w-full mt-4 bg-green-600 hover:bg-green-500 text-white"
-                                    onClick={() => handleOpenModal(cabin.id)}
-                                >
-                                    Ver Detalles
-                                </Button>
-                            </div>
-                        </div>
-                    ))}
+          <div className="container px-4 md:px-6 mx-auto">
+            <h2 className="section-title text-center md:text-left mb-12">
+              Duplex & Lodges
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {cabins.map((cabin) => (
+                <div key={cabin.id} className="rounded-lg overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-xl">
+                  <div className="relative cursor-pointer" onClick={() => handleOpenModal(cabin.id)}>
+                    <Image
+                      src={cabin.images[0]?.url || defaultImage}
+                      alt={cabin.name}
+                      width={400}
+                      height={300}
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="absolute top-0 right-0 bg-yellow-500 text-green-900 px-2 py-1 text-xs font-semibold rounded-bl-lg">
+                      {cabin.rating} ★
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="subsection-title">{cabin.name}</h3>
+                    <p className="text-sm mt-1">{cabin.description}</p>
+                    <div className="flex justify-between items-center mt-2 text-sm">
+                      <span>{cabin.capacity}</span>
+                      <span>{cabin.size}</span>
+                    </div>
+                    <Button
+                      className="w-full mt-4 bg-accent hover:bg-accent-dark text-white"
+                      onClick={() => handleOpenModal(cabin.id)}
+                    >
+                      Ver Detalles
+                    </Button>
+                  </div>
                 </div>
+              ))}
             </div>
+          </div>
 
             {cabins.map((cabin) => (
                 <Dialog key={cabin.id} open={openModal === cabin.id} onOpenChange={handleCloseModal}>

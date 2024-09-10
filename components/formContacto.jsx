@@ -26,17 +26,17 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="w-full bg-gradient-to-br from-green-800 to-green-900 text-white py-12 ">
+    <div className="w-full bg-gradient-to-br from-green-800 to-green-900 text-white py-12">
       <div className="container mx-auto px-4">
-      <h2 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-12 text-white">
-         Contacto y ubicación
+        <h2 className="section-title text-center md:text-left mb-12 text-white">
+          Contacto y ubicación
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Formulario de contacto */}
           <div className="bg-white text-green-800 rounded-xl shadow-xl p-6">
-            <h3 className="text-xl font-semibold mb-4">Envíanos un Mensaje</h3>
+            <h3 className="subsection-title mb-4">Envíanos un Mensaje</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
-              <Input 
+              <Input
                 name="name"
                 className="w-full border-2 border-green-500 focus:border-yellow-500"
                 placeholder="Tu nombre"
@@ -44,7 +44,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
               />
-              <Input 
+              <Input
                 name="email"
                 type="email"
                 className="w-full border-2 border-green-500 focus:border-yellow-500"
@@ -62,8 +62,8 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
               ></textarea>
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 className="w-full bg-yellow-500 text-green-900 hover:bg-yellow-400 flex items-center justify-center"
               >
                 <Send className="mr-2 h-4 w-4" />
@@ -74,7 +74,7 @@ export default function ContactForm() {
 
           {/* Información de contacto */}
           <div className="bg-white text-green-800 rounded-xl shadow-xl p-6">
-            <h3 className="text-xl font-semibold mb-4">Información de Contacto</h3>
+            <h3 className="subsection-title mb-4">Información de Contacto</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-yellow-500" />
@@ -97,7 +97,7 @@ export default function ContactForm() {
 
           {/* Información adicional */}
           <div className="bg-white text-green-800 rounded-xl shadow-xl p-6">
-            <h3 className="text-xl font-semibold mb-4">Información Adicional</h3>
+            <h3 className="subsection-title mb-4">Información Adicional</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Calendar className="h-5 w-5 text-yellow-500" />

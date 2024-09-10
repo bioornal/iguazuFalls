@@ -1,5 +1,42 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-family: 'Poppins', sans-serif;
+  --color-text: #333333;
+  --color-heading: #166534; /* text-green-800 */
+  --color-subheading: #1f2937; /* text-gray-800 */
+}
+
+@layer base {
+  body {
+    @apply font-sans text-base text-gray-800;
+    font-family: var(--font-family);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    font-family: var(--font-family);
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold mb-8 text-center md:text-left text-green-800;
+  }
+
+  .subsection-title {
+    @apply text-2xl font-semibold mb-4 text-gray-700;
+  }
+
+  p {
+    @apply mb-4 font-light;
+  }
+}
 
 /* Aquí puedes agregar estilos globales adicionales si los necesitas */

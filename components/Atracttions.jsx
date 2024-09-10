@@ -72,8 +72,8 @@ function Attractions() {
       className="w-full py-12 md:py-24 lg:py-32 bg-white"
     >
       <div className="container px-4 md:px-6 mx-auto">
-      <h2 className="text-4xl md:text-5xl font-bold text-center md:text-left mb-12 text-green-800">
-Atracciones cercanas
+        <h2 className="section-title text-center md:text-left mb-12">
+          Atracciones cercanas
         </h2>
         <div className="space-y-8">
           {attractions.map((attraction, index) => (
@@ -83,13 +83,13 @@ Atracciones cercanas
               </div>
               <div className="md:w-[40%] p-6 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-bold text-xl text-gray-800 mb-2">{attraction.name}</h3>
-                  <p className="text-gray-600 mb-4">{attraction.description}</p>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <h3 className="subsection-title mb-2">{attraction.name}</h3>
+                  <p className="mb-4">{attraction.description}</p>
+                  <p className="text-sm mb-4">
                     <span className="font-medium">Distancia:</span> {attraction.distance}
                   </p>
                 </div>
-                <Link href={attraction.url} target="_blank" rel="noopener noreferrer" className="text-green-500 hover:underline">
+                <Link href={attraction.url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-green-600">
                   Más Información
                 </Link>
               </div>
