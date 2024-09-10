@@ -2,7 +2,8 @@
 import React from 'react';
 
 import { motion } from 'framer-motion';
-import ContactForm from '../components/formContacto.jsx';
+import ContactForm from '@/components/formContacto';
+import MapaUbicacion from '@/components/MapaUbicacion';
 import HeroSection from '../components/HeroSection.jsx';
 import Cabins from '../components/Cabins.jsx';
 import About from '../components/About.jsx';
@@ -12,7 +13,7 @@ import Footer from '../components/Footer.jsx';
 
 
 
-export default function Page() {
+export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -30,6 +31,7 @@ export default function Page() {
         >
           <ContactForm />
         </motion.section>
+        <MapaUbicacion />
       </main>
       <Footer />
     </div>
