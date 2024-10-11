@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -14,10 +12,24 @@
 }
 
 @layer base {
+  /* Añade esto para eliminar márgenes y rellenos predeterminados */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Asegúrate de que el cuerpo ocupe toda la altura de la ventana */
+  html, body {
+    height: 100%;
+  }
+
   body {
     @apply font-sans text-base text-gray-800;
     font-family: var(--font-family);
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -28,15 +40,20 @@
 
 @layer components {
   .section-title {
-    @apply text-4xl md:text-5xl font-bold mb-8 text-center md:text-left text-green-800;
+    @apply text-4xl md:text-5xl font-bold text-center md:text-left text-green-800;
   }
 
   .subsection-title {
-    @apply text-2xl font-semibold mb-4 text-gray-700;
+    @apply text-2xl font-semibold text-gray-700;
   }
 
   p {
-    @apply mb-4 font-light;
+    @apply font-light;
+  }
+
+  /* Asegúrate de que las secciones no tengan márgenes verticales por defecto */
+  section {
+    @apply w-full;
   }
 }
 

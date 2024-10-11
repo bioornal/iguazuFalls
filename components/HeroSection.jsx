@@ -35,8 +35,8 @@ export default function HeroSection({ openWhatsApp }) {
           key={img}
           src={img}
           alt={`Cataratas del Iguazú ${index + 1}`}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           quality={100}
           priority
           className={`transition-opacity duration-1000 ${
@@ -45,28 +45,7 @@ export default function HeroSection({ openWhatsApp }) {
         />
       ))}
       <div className="absolute inset-0 bg-black opacity-30"></div>
-      {/* <div className="container px-4 md:px-6 relative z-10 max-w-4xl">
-        <div className="flex flex-col items-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-white drop-shadow-lg">
-              Bienvenidos al Paraíso de Iguazú
-            </h1>
-            <p className="mx-auto max-w-[600px] text-white text-base sm:text-lg md:text-xl drop-shadow-lg">
-              Vive la magia de la naturaleza en nuestras cabañas de lujo, a pasos de las majestuosas Cataratas del Iguazú.
-            </p>
-          </div>
-          <div className="space-x-4">
-            <Button className="bg-yellow-500 text-green-900 hover:bg-yellow-400 text-base px-4 py-2" onClick={openWhatsApp}>
-              Reservar Ahora
-            </Button>
-            <Link href="#cabins">
-              <Button variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-green-900 text-base px-4 py-2">
-                Ver Cabañas
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div> */}
+
       <button 
         onClick={goToPrevSlide} 
         className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-1 rounded-full hover:bg-opacity-75 transition-all"

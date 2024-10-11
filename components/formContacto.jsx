@@ -26,7 +26,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="w-full bg-gradient-to-br from-green-800 to-green-900 text-white py-12">
+    <div className="w-full bg-green-950 text-white py-12">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center md:text-left mb-12 text-white">
           Contacto y ubicación
