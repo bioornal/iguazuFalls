@@ -22,14 +22,13 @@ export default function HeroSection({ openWhatsApp }) {
         priority
         className="transition-opacity duration-1000 opacity-100"
       />
-      
-      <div className="absolute bottom-10 left-10 md:bottom-10 md:right-10 z-10">
+      <div className="absolute bottom-4 left-4 md:bottom-10 md:left-10 lg:bottom-16 lg:left-16 z-10">
         <Image
           src={logo}
           alt="Logo de Iguazú Falls Duplex & Lodge"
           width={240}
           height={240}
-          className="opacity-85 hover:opacity-100 transition-opacity duration-300"
+          className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-60 xl:h-60 opacity-85 hover:opacity-100 transition-opacity duration-300"
         />
       </div>
 

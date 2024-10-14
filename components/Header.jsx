@@ -43,7 +43,7 @@ function Header() {
           height={80}
           className="h-20 w-auto"
         /> */}
-        <h2 className="text-2xl font-light">Iguazu Falls Duplex & Lodge</h2>
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light">Iguazu Falls Duplex & Lodge</h2>
         <span className={`ml-4 text-xl font-semibold ${isScrolled ? 'text-green-800' : 'text-white'}`}>
 
         </span>
