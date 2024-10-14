@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-
+import logo from '/public/images/LOGO_FONDO.png'
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,17 +32,18 @@ function Header() {
   ];
 
   return (
-    <header className={`fixed w-full px-6 lg:px-12 h-32 flex items-center justify-between transition-all duration-300 z-50
-        bg-green-950 bg-opacity-30 backdrop-blur-[10px]
+    <header className={`fixed w-full px-6 lg:px-12 h-24 flex items-center justify-between transition-all duration-300 z-50
+        bg-white bg-opacity-60 backdrop-blur-[10px]
   font-sans`}>
       <Link className="flex items-center" href="#">
-        <Image
+        {/* <Image
           src="/images/LOGO_FONDO.png"
           alt="Iguazu Falls Cabins Logo"
           width={80}
           height={80}
-          className="h-24 w-auto"
-        />
+          className="h-20 w-auto"
+        /> */}
+        <h2 className="text-2xl font-light">Iguazu Falls Duplex & Lodge</h2>
         <span className={`ml-4 text-xl font-semibold ${isScrolled ? 'text-green-800' : 'text-white'}`}>
 
         </span>
@@ -52,7 +53,7 @@ function Header() {
           {menuItems.map((item) => (
             <Link
               key={item.name}
-              className={`text-sm font-medium hover:underline underline-offset-4 transition-colors duration-300 text-white`}
+              className={`text-sm font-medium hover:underline underline-offset-4 transition-colors duration-300 ${isScrolled ? 'text-green-950' : 'text-white'}`}
               href={item.href}
             >
               {item.name}

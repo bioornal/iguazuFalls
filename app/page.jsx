@@ -11,12 +11,10 @@ import Header from '../components/Header.jsx';
 import Atracttions from '../components/Atracttions.jsx';
 import Footer from '../components/Footer.jsx';
 
-
-
 export default function Home() {
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       <Header />
       <main className="flex-1 flex flex-col">
         <HeroSection />

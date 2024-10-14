@@ -99,7 +99,7 @@ const cabins = [
         capacity: "2 a 4 personas",
         size: "30 m²",
         rating: 4.5,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta","TV por cable"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta", "TV por cable"],
         images: [
             {
                 id: 1,
@@ -354,21 +354,15 @@ function Cabins() {
     }
 
     return (
-        <section 
-            id="cabins" 
-            className="w-full py-12 md:py-16 lg:py-20 relative"
-            style={{
-                backgroundImage: `url(${backgroundImage.src})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-            }}
+        <section
+            id="cabins"
+            className="w-full py-12 md:py-16 lg:py-20 relative bg-gray-800"
         >
             <div className="container px-4 md:px-6 mx-auto relative z-10">
-                <h2 className="section-title text-center text-white md:text-left mb-12">
+                <h2 className="section-title text-center text-gray-50 bg-green-400 py-2 px-4 rounded-lg md:text-left mb-12">
                     Duplex & Lodges
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                     {cabins.map((cabin) => (
                         <div key={cabin.id} className="rounded-lg overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-xl flex flex-col h-full">
                             <div className="relative cursor-pointer" onClick={() => handleOpenModal(cabin.id)}>
@@ -391,7 +385,7 @@ function Cabins() {
                                     <span>{cabin.size}</span>
                                 </div>
                                 <Button
-                                    className="w-full mt-4 bg-accent hover:bg-accent-dark text-white"
+                                    className="w-full mt-4 bg-green-400 hover:bg-green-700 text-white"
                                     onClick={() => handleOpenModal(cabin.id)}
                                 >
                                     Ver Detalles

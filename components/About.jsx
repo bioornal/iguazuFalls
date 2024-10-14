@@ -8,22 +8,52 @@ import atencion from '/public/images/atencion.png'
 
 export default function About() {
   const features = [
-    { icon: Leaf, text: "Experiencia única a minutos de la selva misionera", image: selvaImage },
-    { icon: MapPin, text: "Ubicación estratégica a solo 20 minutos de las Cataratas del Iguazú", image: "/images/cataratas.jpg" },
-    { icon: Star, text: "Modernidad y simplicidad en ambientes relajados", image: "/images/ambiente.jpg" },
-    { icon: Home, text: "Alojamientos bien equipados para parejas, familias y grupos", image: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0022.jpg" },
-    { icon: Users, text: "Atención personalizada y cálida de nuestro equipo local", image: atencion },
-    { icon: Car, text: "Departamentos familiares con garage para tu tranquilidad", image: "/images/garage.jpg" },
+    { 
+      icon: Leaf, 
+      text: "Experiencia única a minutos de la selva misionera", 
+      image: selvaImage,
+      description: "Sumérgete en la exuberante belleza de la selva misionera. Descubrí el canto de aves exóticas y disfruta de paseos por senderos naturales muy cerca de tu alojamiento."
+    },
+    { 
+      icon: Star, 
+      text: "Modernidad y simplicidad en ambientes relajados", 
+      image: "/images/relajado.jpg",
+      description: "Nuestros espacios combinan diseño contemporáneo con la calidez de la naturaleza. Relájate en ambientes que fusionan confort moderno y la serenidad del entorno."
+    },
+    { 
+      icon: Home, 
+      text: "Alojamientos bien equipados para parejas, familias y grupos", 
+      image: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0022.jpg",
+      description: "Desde acogedoras suites para parejas hasta amplios departamentos para familias, ofrecemos opciones para todos. Cada espacio está cuidadosamente equipado para tu máxima comodidad."
+    },
+    { 
+      icon: Users, 
+      text: "Atención personalizada y cálida de nuestro equipo local", 
+      image: atencion,
+      description: "Nuestro equipo de expertos locales está dedicado a hacer tu estancia inolvidable. Confía en nosotros para recomendaciones, asistencia y un servicio que supera expectativas."
+    },
+    { 
+      icon: MapPin, 
+      text: "Ubicación estratégica a solo 20 minutos de las Cataratas del Iguazú", 
+      image: "/images/mapa.png",
+      description: "Aprovecha nuestra ubicación privilegiada para visitar las majestuosas Cataratas del Iguazú. Estamos a un corto trayecto de una de las maravillas naturales del mundo."
+    },
+    { 
+      icon: Car, 
+      text: "Departamentos familiares con garage para tu tranquilidad", 
+      image: "/images/garage.png",
+      description: "Viaja con total tranquilidad sabiendo que tu vehículo estará seguro. Nuestros departamentos familiares incluyen garage privado para tu comodidad y seguridad."
+    },
   ]
 
   return (
     <>
       <div className="absolute inset-x-0 top-0 bottom-0 z-0"></div>
-      <section className="relative bg-gradient-to-t from-green-800 to-transparent z-10 -mt-16 md:-mt-24 lg:-mt-25">
+      <section className="relative bg-gradient-to-t from-gray-800 via-gray-50 to-transparent z-10 -mt-16 md:-mt-24 lg:-mt-25">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             <div className="space-y-6 lg:mt-40 md:mt-24 mt-32">
-              <h2 className="text-4xl font-bold text-green-950">Iguazu Falls Duplex & Lodge</h2>
+              <h2 className="text-[40px] font-semibold text-gray-100 bg-green-400 py-4 px-4 rounded-lg">Sobre nosotros</h2>
               <p className="text-lg text-black text-justify">
                 Iguazu Falls Duplex & Lodge es un refugio encantador ubicado a pocos minutos de las imponentes Cataratas del Iguazú. Cada una de nuestros departamentos ha sido diseñado con un toque elegante y moderno, brindando comodidad y confort en la ciudad natural incomparable de Iguazú. Todos cuentan con Wi-Fi gratuito y equipamiento premium para que disfrutes de una estancia placentera. Además de los acogedoras departamentos, ofrecemos una piscina al aire libre, creando el ambiente perfecto para relajarte.
               </p>
@@ -70,8 +100,8 @@ function FeatureCard({ item }) {
       </div>
       <div className="p-3">
         <h3 className="font-bold text-sm mb-1">{item.text}</h3>
-        <p className="text-xs text-gray-600">
-          Descubra más sobre esta característica.
+        <p className="text-xs text-gray-600 ">
+          {item.description}
         </p>
       </div>
     </motion.div>

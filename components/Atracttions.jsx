@@ -69,10 +69,10 @@ function Attractions() {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       id="attractions"
-      className="w-full py-12 md:py-24 lg:py-32 bg-white"
+      className="w-full py-12 md:py-24 lg:py-20 bg-white"
     >
       <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="section-title text-center md:text-left mb-12">
+        <h2 className="section-title text-center md:text-left mb-12 text-gray-100 bg-green-400 py-2 px-4 rounded-lg">
           Atracciones cercanas
         </h2>
         <div className="space-y-8">
