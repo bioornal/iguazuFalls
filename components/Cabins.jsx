@@ -277,7 +277,12 @@ const cabins = [
         capacity: "3 personas",
         size: "40 m²",
         rating: 4.7,
-        amenities: ["Wi-Fi", "Terraza con vista al río", "Kayak incluido", "Parrilla"]
+        amenities: ["Wi-Fi", "Terraza con vista al río", "Kayak incluido", "Parrilla"],
+        images: [
+            { id: 1, url: "https://picsum.photos/seed/cabana-rio-1/400/300" },
+            { id: 2, url: "https://picsum.photos/seed/cabana-rio-2/400/300" },
+            { id: 3, url: "https://picsum.photos/seed/cabana-rio-3/400/300" },
+        ]
     },
     {
         id: 6,
@@ -286,7 +291,11 @@ const cabins = [
         capacity: "2-4 personas",
         size: "50 m²",
         rating: 4.6,
-        amenities: ["Estufa a leña", "Observatorio de aves", "Senderos privados", "Ducha al aire libre"]
+        amenities: ["Estufa a leña", "Observatorio de aves", "Senderos privados", "Ducha al aire libre"],
+        images: [
+            { id: 1, url: "https://picsum.photos/seed/cabana-bosque-1/400/300" },
+            { id: 2, url: "https://picsum.photos/seed/cabana-bosque-2/400/300" },
+        ]
     },
     {
         id: 7,
@@ -295,7 +304,10 @@ const cabins = [
         capacity: "2 personas",
         size: "55 m²",
         rating: 4.9,
-        amenities: ["Cama king size", "Bañera de hidromasaje", "Champagne de bienvenida", "Desayuno en la cama"]
+        amenities: ["Cama king size", "Bañera de hidromasaje", "Champagne de bienvenida", "Desayuno en la cama"],
+        images: [
+            { id: 1, url: "https://picsum.photos/seed/suite-luna-miel-1/400/300" },
+        ]
     },
     {
         id: 8,
@@ -304,7 +316,10 @@ const cabins = [
         capacity: "4 personas",
         size: "45 m²",
         rating: 4.7,
-        amenities: ["Equipo de trekking", "Mapas de senderos", "Terraza panorámica", "Ducha de alta presión"]
+        amenities: ["Equipo de trekking", "Mapas de senderos", "Terraza panorámica", "Ducha de alta presión"],
+        images: [
+            { id: 1, url: "https://picsum.photos/seed/cabana-aventura-1/400/300" },
+        ]
     },
     {
         id: 9,
@@ -313,7 +328,12 @@ const cabins = [
         capacity: "2-3 personas",
         size: "35 m²",
         rating: 4.8,
-        amenities: ["Paneles solares", "Recolección de agua de lluvia", "Compostaje", "Productos orgánicos"]
+        amenities: ["Paneles solares", "Recolección de agua de lluvia", "Compostaje", "Productos orgánicos"],
+        images: [
+            { id: 1, url: "https://picsum.photos/seed/cabana-rio-4/400/300" },
+            { id: 2, url: "https://picsum.photos/seed/cabana-rio-5/400/300" },
+            { id: 3, url: "https://picsum.photos/seed/cabana-rio-6/400/300" },
+        ]
     },
     {
         id: 10,
@@ -322,7 +342,12 @@ const cabins = [
         capacity: "8-10 personas",
         size: "100 m²",
         rating: 4.6,
-        amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"]
+        amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"],
+        images: [
+            { id: 1, url: "https://picsum.photos/seed/cabana-rio-7/400/300" },
+            { id: 2, url: "https://picsum.photos/seed/cabana-rio-8/400/300" },
+            { id: 3, url: "https://picsum.photos/seed/cabana-rio-9/400/300" },
+        ]
     },
     {
         id: 11,
@@ -331,7 +356,12 @@ const cabins = [
         capacity: "8-10 personas",
         size: "100 m²",
         rating: 4.6,
-        amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"]
+        amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"],
+        images: [
+
+            { id: 1, url: "https://picsum.photos/seed/suite-luna-miel-2/400/300" },
+
+        ]
     },
 
 ].map(cabin => ({
