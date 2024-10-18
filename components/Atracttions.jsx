@@ -16,7 +16,7 @@ const attractions = [
     name: "La Aripuca",
     description: "Atracción turística que muestra la cultura guaraní y la importancia de la conservación. Este fascinante lugar ofrece una experiencia educativa única sobre la flora y fauna de la región, así como las tradiciones ancestrales de los pueblos originarios.",
     icon: <TreePine className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />,
-    distance: "15 minutos",
+    distance: "10 minutos",
     url: "http://www.aripuca.com.ar/",
     image: "https://excursioneseniguazu.com.ar/imagenes/aripuca-puerto-iguazu/aripuca-de-iguazu.jpg"
   },
@@ -24,7 +24,7 @@ const attractions = [
     name: "Güirá Oga",
     description: "Centro de rescate y rehabilitación de aves, ideal para los amantes de la naturaleza. Aquí podrás observar de cerca una gran variedad de especies de aves y aprender sobre los esfuerzos de conservación en la región.",
     icon: <Bird className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />,
-    distance: "25 minutos",
+    distance: "10 minutos",
     url: "https://guiraoga.com.ar/",
     image: "https://latitur.com/uploads/media/cactus_product_tours_by_locals/2661.reservas1@iemanjaturismo.com/6538/ca96b4ffae6cb0517f73cbc61e2d93976ad4315e.jpeg"
   },
@@ -32,7 +32,7 @@ const attractions = [
     name: "Parque de las Aves",
     description: "Zoológico de aves con más de 150 especies en su hábitat natural. Este parque ofrece una experiencia inmersiva en la selva, donde podrás caminar entre aves exóticas y aprender sobre la biodiversidad de la región.",
     icon: <Leaf className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />,
-    distance: "10 minutos",
+    distance: "30 minutos",
     url: "https://parquedasaves.com.br/es/",
     image: "https://www.nordic-travel.com.ar/es/wp-content/uploads/2020/06/avesgaleria1.jpg"
   },
@@ -40,7 +40,7 @@ const attractions = [
     name: "Ciudad del Este",
     description: "Ciudad paraguaya conocida por sus compras, a un corto viaje desde Iguazú. Esta vibrante ciudad ofrece una experiencia cultural única y la oportunidad de adquirir productos a precios competitivos en sus numerosos centros comerciales.",
     icon: <Building className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />,
-    distance: "45 minutos",
+    distance: "30 minutos",
     url: "https://visitaparaguay.com.py/ciudad/ciudad-del-este",
     image: "https://instantesdeviajes.com/wp-content/uploads/2022/06/IMG_20220321_122002034-scaled.jpg"
   },
@@ -48,7 +48,7 @@ const attractions = [
     name: "Represa de Itaipu",
     description: "Una de las mayores obras de ingeniería del mundo, generando energía limpia. Esta impresionante estructura no solo es una maravilla tecnológica, sino también un ejemplo de cooperación internacional entre Brasil y Paraguay.",
     icon: <Zap className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />,
-    distance: "40 minutos",
+    distance: "30 minutos",
     url: "https://turismoitaipu.com.br/es/a-usina-itaipu/",
     image: "https://radioconcierto.com.py/wp-content/uploads/2020/01/itaipu-turismo.jpg"
   },
