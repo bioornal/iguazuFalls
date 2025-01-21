@@ -15,7 +15,7 @@ const cabins = [
         capacity: "2 a 4 personas",
         size: "30 m²",
         rating: 4.5,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta", "TV por cable"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta", "TV por cable", "Garage"],
         images: [
             {
                 id: 1,
@@ -103,77 +103,39 @@ const cabins = [
         images: [
             {
                 id: 1,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/9.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737469344/Natalia/palo%20rosa/1_mosnkd.jpg"
             },
-
             {
                 id: 2,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/2.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737469346/Natalia/palo%20rosa/8_hyuzxd.jpg"
             },
             {
                 id: 3,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/3.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737469345/Natalia/palo%20rosa/7_b6v9xu.jpg"
             },
             {
                 id: 4,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/4.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737469345/Natalia/palo%20rosa/5_h0o0pl.jpg"
             },
             {
                 id: 5,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/5.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737469344/Natalia/palo%20rosa/3_ayxhaw.jpg"
             },
             {
                 id: 6,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/6.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737469343/Natalia/palo%20rosa/2_p3axsu.jpg"
             },
             {
                 id: 7,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/7.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737469343/Natalia/palo%20rosa/9_uj0zvd.jpg"
             },
+
             {
                 id: 8,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/8.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737469344/Natalia/palo%20rosa/4_iuyiao.jpg"
             },
-            {
-                id: 9,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/1.jpg"
-            },
-            {
-                id: 10,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/10.jpg"
-            },
-            {
-                id: 11,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/11.jpg"
-            },
-            {
-                id: 12,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/12.jpg"
-            },
-            {
-                id: 13,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/13.jpg"
-            },
-            {
-                id: 14,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/14.jpg"
-            },
-            {
-                id: 15,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/15.jpg"
-            },
-            {
-                id: 16,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/16.jpg"
-            },
-            {
-                id: 17,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/17.jpg"
-            },
-            {
-                id: 18,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/18.jpg"
-            },
+
+
         ]
     },
     {
@@ -185,8 +147,13 @@ const cabins = [
         rating: 4.6,
         amenities: ["Wi-Fi", "Aire acondicionado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble King", , "Sala comedor: 1 sofá cama", "TV por cable"],
         images: [
-            { id: 1, url: "https://picsum.photos/seed/cabana-bosque-1/400/300" },
-            { id: 2, url: "https://picsum.photos/seed/cabana-bosque-2/400/300" },
+            { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737470051/Natalia/araucaria/2_soyvu4.jpg" },
+            { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737470051/Natalia/araucaria/4_zg3ug5.jpg" },
+            { id: 3, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737470052/Natalia/araucaria/3_btzs32.jpg" },
+            { id: 4, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737470052/Natalia/araucaria/5_ku4roy.jpg" },
+            { id: 5, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737470053/Natalia/araucaria/1_fjzf6c.jpg" },
+            { id: 6, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737470053/Natalia/araucaria/7_cuzgwb.jpg" },
+            { id: 7, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737470054/Natalia/araucaria/6_mcoljj.jpg" },
         ]
     },
     {
