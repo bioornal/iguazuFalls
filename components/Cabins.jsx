@@ -10,7 +10,7 @@ const defaultImage = "https://via.placeholder.com/400x300?text=No+Image+Availabl
 const cabins = [
     {
         id: 1,
-        name: "Lodge Familiar 1",
+        name: "Lodge Ambay",
         description: "Departamento acogedor de dos habitaciones",
         capacity: "2 a 4 personas",
         size: "30 m²",
@@ -94,7 +94,7 @@ const cabins = [
     },
     {
         id: 2,
-        name: "Lodge Familiar 2",
+        name: "Lodge Palo rosa",
         description: "Departamento acogedor de dos habitaciones",
         capacity: "2 a 4 personas",
         size: "30 m²",
@@ -177,13 +177,78 @@ const cabins = [
         ]
     },
     {
+        id: 6,
+        name: "Lodge Araucaria",
+        description: "Departamento moderno de una habitación",
+        capacity: "1 a 4 personas",
+        size: "25 m²",
+        rating: 4.6,
+        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble King", , "Sala comedor: 1 sofá cama", "TV por cable"],
+        images: [
+            { id: 1, url: "https://picsum.photos/seed/cabana-bosque-1/400/300" },
+            { id: 2, url: "https://picsum.photos/seed/cabana-bosque-2/400/300" },
+        ]
+    },
+    {
+        id: 7,
+        name: "Lodge Timbó",
+        description: "Departamento moderno de una habitación",
+        capacity: "1 a 2 personas",
+        size: "20 m²",
+        rating: 4.6,
+        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble King", "TV por cable"],
+        images: [
+            { id: 1, url: "https://picsum.photos/seed/cabana-bosque-1/400/300" },
+            { id: 2, url: "https://picsum.photos/seed/cabana-bosque-2/400/300" },
+        ]
+    },
+    {
+        id: 4,
+        name: "Lodge Guatambú ",
+        description: "Departamento moderno de una habitación",
+        capacity: "1 a 4 personas",
+        size: "25 m²",
+        rating: 4.6,
+        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble King", , "Sala comedor: 1 sofá cama", "TV por cable"],
+        images: [
+            {
+                id: 1,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0037.jpg"
+            },
+            {
+                id: 2,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0036.jpg"
+            },
+            {
+                id: 3,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0038.jpg"
+            },
+            {
+                id: 4,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0001.jpg"
+            },
+            {
+                id: 5,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0002.jpg"
+            },
+            {
+                id: 6,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0003.jpg"
+            },
+            {
+                id: 7,
+                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0004.jpg"
+            }
+        ]
+    },
+    {
         id: 3,
-        name: "Studio",
+        name: "Studio Lapacho",
         description: "Monoambiente",
         capacity: "1 a 4 personas",
-        size: "30 m²",
+        size: "25 m²",
         rating: 4.8,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina completa", "Baño privado", "TV por cable", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 1: 1 sofá cama",],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina completa", "Baño privado", "TV por cable", "1 cama doble grande Queen", "1 sofá cama",],
         images: [
             {
                 id: 1,
@@ -231,104 +296,42 @@ const cabins = [
             }
         ]
     },
-    {
-        id: 4,
-        name: "Lodge",
-        description: "Departamento acogedor de una habitación.",
-        capacity: "1 a 4 personas",
-        size: "30 m²",
-        rating: 5.0,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina completa", "Baño privado", "TV por cable", "Dormitorio 1: 1 cama doble grande King", "Sala: 1 sofá cama",],
-        images: [
-            {
-                id: 1,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0037.jpg"
-            },
-            {
-                id: 2,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0036.jpg"
-            },
-            {
-                id: 3,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0038.jpg"
-            },
-            {
-                id: 4,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0001.jpg"
-            },
-            {
-                id: 5,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0002.jpg"
-            },
-            {
-                id: 6,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0003.jpg"
-            },
-            {
-                id: 7,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0004.jpg"
-            }
-        ]
-    },
+
     {
         id: 5,
-        name: "Cabaña Río",
-        description: "Hermosa cabaña con vistas al río y acceso directo a la orilla.",
-        capacity: "3 personas",
-        size: "40 m²",
+        name: "Studio Guembe",
+        description: "Monoambiente",
+        capacity: "1 a 4 personas",
+        size: "25 m²",
         rating: 4.7,
-        amenities: ["Wi-Fi", "Terraza con vista al río", "Kayak incluido", "Parrilla"],
+        amenities: ["Wi-Fi", "Aire acondicionado","Microondas","Frigobar", "Baño privado", "TV por cable", "1 cama doble King", "2 camas individuales",],
         images: [
             { id: 1, url: "https://picsum.photos/seed/cabana-rio-1/400/300" },
             { id: 2, url: "https://picsum.photos/seed/cabana-rio-2/400/300" },
             { id: 3, url: "https://picsum.photos/seed/cabana-rio-3/400/300" },
         ]
     },
-    {
-        id: 6,
-        name: "Cabaña del Bosque",
-        description: "Cabaña rústica inmersa en el corazón del bosque para los amantes de la naturaleza.",
-        capacity: "2-4 personas",
-        size: "50 m²",
-        rating: 4.6,
-        amenities: ["Estufa a leña", "Observatorio de aves", "Senderos privados", "Ducha al aire libre"],
-        images: [
-            { id: 1, url: "https://picsum.photos/seed/cabana-bosque-1/400/300" },
-            { id: 2, url: "https://picsum.photos/seed/cabana-bosque-2/400/300" },
-        ]
-    },
-    {
-        id: 7,
-        name: "Suite Luna de Miel",
-        description: "Romántica suite perfecta para parejas en su luna de miel o aniversario.",
-        capacity: "2 personas",
-        size: "55 m²",
-        rating: 4.9,
-        amenities: ["Cama king size", "Bañera de hidromasaje", "Champagne de bienvenida", "Desayuno en la cama"],
-        images: [
-            { id: 1, url: "https://picsum.photos/seed/suite-luna-miel-1/400/300" },
-        ]
-    },
+
     {
         id: 8,
-        name: "Cabaña Aventura",
-        description: "Diseñada para los amantes de la aventura, con equipo de trekking incluido.",
-        capacity: "4 personas",
-        size: "45 m²",
+        name: "Duplex Laurel",
+        description: "Duplex confortable de 2 plantas",
+        capacity: "2 a 6 personas",
+        size: "50 m²",
         rating: 4.7,
-        amenities: ["Equipo de trekking", "Mapas de senderos", "Terraza panorámica", "Ducha de alta presión"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
             { id: 1, url: "https://picsum.photos/seed/cabana-aventura-1/400/300" },
         ]
     },
     {
         id: 9,
-        name: "Eco-Cabaña",
-        description: "Cabaña ecológica autosustentable, perfecta para los conscientes del medio ambiente.",
-        capacity: "2-3 personas",
-        size: "35 m²",
-        rating: 4.8,
-        amenities: ["Paneles solares", "Recolección de agua de lluvia", "Compostaje", "Productos orgánicos"],
+        name: "Duplex Cedro",
+        description: "Duplex confortable de 2 plantas",
+        capacity: "2 a 6 personas",
+        size: "50 m²",
+        rating: 4.7,
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
             { id: 1, url: "https://picsum.photos/seed/cabana-rio-4/400/300" },
             { id: 2, url: "https://picsum.photos/seed/cabana-rio-5/400/300" },
@@ -337,12 +340,12 @@ const cabins = [
     },
     {
         id: 10,
-        name: "Cabaña Gran Familia",
-        description: "Amplia cabaña para grupos grandes o familias extendidas.",
-        capacity: "8-10 personas",
-        size: "100 m²",
-        rating: 4.6,
-        amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"],
+        name: "Duplex Ombú",
+        description: "Duplex confortable de 2 plantas",
+        capacity: "2 a 6 personas",
+        size: "50 m²",
+        rating: 4.7,
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
             { id: 1, url: "https://picsum.photos/seed/cabana-rio-7/400/300" },
             { id: 2, url: "https://picsum.photos/seed/cabana-rio-8/400/300" },
@@ -351,12 +354,12 @@ const cabins = [
     },
     {
         id: 11,
-        name: "Cabaña Otro Nombre",
-        description: "Amplia cabaña para grupos grandes o familias extendidas.",
-        capacity: "8-10 personas",
-        size: "100 m²",
-        rating: 4.6,
-        amenities: ["Múltiples dormitorios", "Gran sala de estar", "Cocina completa", "Área de juegos para niños"],
+        name: "Duplex Pitanga",
+        description: "Duplex confortable de 2 plantas",
+        capacity: "2 a 6 personas",
+        size: "50 m²",
+        rating: 4.7,
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
 
             { id: 1, url: "https://picsum.photos/seed/suite-luna-miel-2/400/300" },
