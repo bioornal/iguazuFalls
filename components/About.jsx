@@ -50,7 +50,7 @@ export default function About() {
       <section className="relative bg-gradient-to-t from-gray-800 via-gray-50 to-transparent z-10 -mt-16 md:-mt-24 lg:-mt-25">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-            <div className="space-y-6 lg:mt-40 md:mt-24 mt-32">
+            <div className="space-y-6 lg:mt-40 md:mt-36 mt-24">
               <h2 className="text-[40px] font-semibold text-gray-100 bg-green-400 py-4 px-4 rounded-lg">Sobre nosotros</h2>
               <p className="text-sm sm:text-lg text-black text-justify">
                 Iguazu Falls Duplex & Lodge es un refugio encantador ubicado a pocos minutos de las imponentes Cataratas del Iguazú. Cada una de nuestros departamentos ha sido diseñado con un toque elegante y moderno, brindando comodidad y confort en la ciudad natural incomparable de Iguazú. Todos cuentan con Wi-Fi gratuito y equipamiento premium para que disfrutes de una estancia placentera. Además de los acogedoras departamentos, ofrecemos una piscina al aire libre, creando el ambiente perfecto para relajarte.
@@ -64,7 +64,7 @@ export default function About() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {features.map((item, index) => (
                 <FeatureCard key={index} item={item} />
               ))}

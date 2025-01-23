@@ -69,23 +69,23 @@ function Attractions() {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       id="attractions"
-      className="w-full py-12 md:py-24 lg:py-20 bg-white"
+      className="w-full py-8 sm:py-12 md:py-24 lg:py-20 bg-white"
     >
-      <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="section-title text-center md:text-left mb-12 text-gray-100 bg-green-400 py-2 px-4 rounded-lg">
+      <div className="container px-3 sm:px-4 md:px-6 mx-auto">
+        <h2 className="section-title text-center md:text-left mb-8 sm:mb-12 text-gray-100 bg-green-400 py-2 px-4 rounded-lg">
           Atracciones cercanas
         </h2>
-        <div className="space-y-8">
+        <div className="space-y-4 sm:space-y-8">
           {attractions.map((attraction, index) => (
             <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} bg-white rounded-lg overflow-hidden shadow-md`}>
-              <div className="md:w-[60%] h-64 bg-gray-300">
+              <div className="md:w-[60%] h-48 sm:h-64 bg-gray-300">
                 <img src={attraction.image} alt={attraction.name} className="w-full h-full object-cover" />
               </div>
-              <div className="md:w-[40%] p-6 flex flex-col justify-between">
+              <div className="md:w-[40%] p-4 sm:p-6 flex flex-col justify-between">
                 <div>
-                  <h3 className="subsection-title mb-2">{attraction.name}</h3>
-                  <p className="mb-4">{attraction.description}</p>
-                  <p className="text-sm mb-4">
+                  <h3 className="subsection-title mb-1 sm:mb-2">{attraction.name}</h3>
+                  <p className="mb-2 sm:mb-4 text-sm sm:text-base">{attraction.description}</p>
+                  <p className="text-xs sm:text-sm mb-2 sm:mb-4">
                     <span className="font-medium">Distancia:</span> {attraction.distance}
                   </p>
                 </div>
