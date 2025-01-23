@@ -21,7 +21,7 @@ const amenityIcons = {
   'Dormitorio 2: 1 cama cucheta': Bed,
   'TV por cable': Tv,
   'Cocina equipada': Utensils,
-  'Garage': Car,
+  'Garage (Consultar disponibilidad)': Car,
 }
 
 const defaultImage = "https://via.placeholder.com/400x300?text=No+Image+Available"
@@ -146,7 +146,7 @@ export default function CabinModal({ cabin, onClose }) {
                   return (
                     <li key={index} className="flex items-center">
                       <IconComponent className="mr-3 h-5 w-5 text-green-600" />
-                      <span className={`${amenity === 'Garage' ? 'bg-yellow-100 px-2 py-1 rounded-md font-medium' : ''}`}>
+                      <span className={`${amenity === 'Garage (Consultar disponibilidad)' ? 'bg-yellow-100 px-2 py-1 rounded-md font-medium' : ''}`}>
                         {amenity}
                       </span>
                     </li>

@@ -52,7 +52,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
             <div className="space-y-6 lg:mt-40 md:mt-24 mt-32">
               <h2 className="text-[40px] font-semibold text-gray-100 bg-green-400 py-4 px-4 rounded-lg">Sobre nosotros</h2>
-              <p className="text-lg text-black text-justify">
+              <p className="text-sm sm:text-lg text-black text-justify">
                 Iguazu Falls Duplex & Lodge es un refugio encantador ubicado a pocos minutos de las imponentes Cataratas del Iguazú. Cada una de nuestros departamentos ha sido diseñado con un toque elegante y moderno, brindando comodidad y confort en la ciudad natural incomparable de Iguazú. Todos cuentan con Wi-Fi gratuito y equipamiento premium para que disfrutes de una estancia placentera. Además de los acogedoras departamentos, ofrecemos una piscina al aire libre, creando el ambiente perfecto para relajarte.
               </p>
               <div className="relative h-64 rounded-lg overflow-hidden">

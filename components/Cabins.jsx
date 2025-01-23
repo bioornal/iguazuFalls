@@ -15,7 +15,7 @@ const cabins = [
         capacity: "2 a 4 personas",
         size: "30 m²",
         rating: 4.5,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta", "TV por cable", "Garage"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta", "TV por cable", "Garage (Consultar disponibilidad)"],
         images: [
             {
                 id: 1,
@@ -99,7 +99,7 @@ const cabins = [
         capacity: "2 a 4 personas",
         size: "30 m²",
         rating: 4.5,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta", "TV por cable"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta", "TV por cable", "Garage (Consultar disponibilidad)"],
         images: [
             {
                 id: 1,
@@ -165,8 +165,15 @@ const cabins = [
         rating: 4.6,
         amenities: ["Wi-Fi", "Aire acondicionado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble King", "TV por cable"],
         images: [
-            { id: 1, url: "https://picsum.photos/seed/cabana-bosque-1/400/300" },
-            { id: 2, url: "https://picsum.photos/seed/cabana-bosque-2/400/300" },
+            { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737630800/Natalia/timbo/IMG-20250123-WA0012_b8gtir.jpg" },
+            { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737630799/Natalia/timbo/IMG-20250123-WA0014_ybhoji.jpg" },
+            { id: 3, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737630799/Natalia/timbo/IMG-20250123-WA0011_y8b3cq.jpg" },
+            { id: 4, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737630800/Natalia/timbo/IMG-20250123-WA0010_ymknw1.jpg" },
+            { id: 5, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737630800/Natalia/timbo/IMG-20250123-WA0013_kgbkej.jpg" },
+            { id: 6, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737630800/Natalia/timbo/IMG-20250123-WA0017_sxqbod.jpg" },
+            { id: 7, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737630799/Natalia/timbo/Imagen_de_WhatsApp_2025-01-23_a_las_08.10.16_690f0c4b_gf5pkz.jpg" },
+            { id: 8, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737630800/Natalia/timbo/IMG-20250123-WA0015_gcr2oi.jpg" },
+            { id: 9, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737630800/Natalia/timbo/IMG-20250123-WA0016_oogvrd.jpg" },
         ]
     },
     {
@@ -208,6 +215,7 @@ const cabins = [
             }
         ]
     },
+
     {
         id: 3,
         name: "Studio Lapacho",
@@ -263,7 +271,6 @@ const cabins = [
             }
         ]
     },
-
     {
         id: 5,
         name: "Studio Guembe",
@@ -273,9 +280,11 @@ const cabins = [
         rating: 4.7,
         amenities: ["Wi-Fi", "Aire acondicionado","Microondas","Frigobar", "Baño privado", "TV por cable", "1 cama doble King", "2 camas individuales",],
         images: [
-            { id: 1, url: "https://picsum.photos/seed/cabana-rio-1/400/300" },
-            { id: 2, url: "https://picsum.photos/seed/cabana-rio-2/400/300" },
-            { id: 3, url: "https://picsum.photos/seed/cabana-rio-3/400/300" },
+            { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737631330/Natalia/guembe/IMG-20250123-WA0025_quejcq.jpg" },
+            { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737631330/Natalia/guembe/IMG-20250123-WA0024_kmlsaq.jpg" },
+            { id: 3, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737631330/Natalia/guembe/IMG-20250123-WA0023_h71cvi.jpg" },
+            { id: 4, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737631330/Natalia/guembe/IMG-20250123-WA0026_oxfloi.jpg" },
+            { id: 5, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737631330/Natalia/guembe/IMG-20250123-WA0027_igtdrc.jpg" },
         ]
     },
 
@@ -288,7 +297,18 @@ const cabins = [
         rating: 4.7,
         amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
-            { id: 1, url: "https://picsum.photos/seed/cabana-aventura-1/400/300" },
+            { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632671/Natalia/laurel/7_r0umc1.jpg" },
+            { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632672/Natalia/laurel/8_uw8mam.jpg" },
+            { id: 3, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632671/Natalia/laurel/6_onkdls.jpg" },
+            { id: 4, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632670/Natalia/laurel/5_yuyivj.jpg" },
+            { id: 5, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632670/Natalia/laurel/3_tf6pc0.jpg" },
+            { id: 6, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632670/Natalia/laurel/4_h44h5s.jpg" },
+            { id: 7, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632669/Natalia/laurel/2_xacaz6.jpg" },
+            { id: 8, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632669/Natalia/laurel/1_daykdx.jpg" },
+            { id: 9, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632675/Natalia/laurel/12_pnjtya.jpg" },
+            { id: 10, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632673/Natalia/laurel/10_rlivqz.jpg" },
+            { id: 11, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632674/Natalia/laurel/11_yvoizu.jpg" },
+            { id: 12, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632673/Natalia/laurel/9_rptaxz.jpg" },
         ]
     },
     {
@@ -300,9 +320,7 @@ const cabins = [
         rating: 4.7,
         amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
-            { id: 1, url: "https://picsum.photos/seed/cabana-rio-4/400/300" },
-            { id: 2, url: "https://picsum.photos/seed/cabana-rio-5/400/300" },
-            { id: 3, url: "https://picsum.photos/seed/cabana-rio-6/400/300" },
+
         ]
     },
     {
@@ -314,9 +332,7 @@ const cabins = [
         rating: 4.7,
         amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
-            { id: 1, url: "https://picsum.photos/seed/cabana-rio-7/400/300" },
-            { id: 2, url: "https://picsum.photos/seed/cabana-rio-8/400/300" },
-            { id: 3, url: "https://picsum.photos/seed/cabana-rio-9/400/300" },
+
         ]
     },
     {
@@ -329,13 +345,14 @@ const cabins = [
         amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
 
-            { id: 1, url: "https://picsum.photos/seed/suite-luna-miel-2/400/300" },
-
         ]
     },
 
 ].map(cabin => ({
     ...cabin,
+    amenities: cabin.amenities.includes("Garage (Consultar disponibilidad)") 
+        ? cabin.amenities 
+        : [...cabin.amenities, "Garage (Consultar disponibilidad)"],
     images: cabin.images && cabin.images.length > 0
         ? cabin.images
         : [{ id: 'default', url: defaultImage }]
