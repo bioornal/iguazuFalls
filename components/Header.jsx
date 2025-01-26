@@ -19,7 +19,7 @@ function Header() {
   }, []);
 
   const openWhatsApp = () => {
-    const phoneNumber = "5493757210123";
+    const phoneNumber = "543757570534";
     const message = encodeURIComponent("Hola, me gustaría hacer una reserva en Iguazu Falls.");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
