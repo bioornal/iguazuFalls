@@ -5,7 +5,7 @@ import Image from 'next/image'
 import CabinModal from './CabinModal';
 import backgroundImage from '/public/images/grande.svg'
 
-const defaultImage = "https://via.placeholder.com/400x300?text=No+Image+Available"
+const defaultImage = "/images/no-image.jpg"
 
 const cabins = [
     {
@@ -344,7 +344,6 @@ const cabins = [
         rating: 4.7,
         amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
-
         ]
     },
 
