@@ -26,7 +26,7 @@ const attractions = [
     icon: <Bird className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />,
     distance: "10 minutos",
     url: "https://guiraoga.com.ar/",
-    image: "https://latitur.com/uploads/media/cactus_product_tours_by_locals/2661.reservas1@iemanjaturismo.com/6538/ca96b4ffae6cb0517f73cbc61e2d93976ad4315e.jpeg"
+    image: "https://sentiargentina.com/wp-content/uploads/2015/04/10422545_909438202441119_4220791886648223746_n.jpg"
   },
   {
     name: "Parque de las Aves",

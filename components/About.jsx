@@ -57,7 +57,7 @@ export default function About() {
               </p>
               <div className="relative h-64 rounded-lg overflow-hidden">
                 <Image
-                  src="https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/HeroImages/pileta2-Photoroom.jpg"
+                  src="https://res.cloudinary.com/djtvjkcu6/image/upload/v1737901892/Natalia/pileta/about_grf7nz.jpg"
                   alt="Paisaje de Iguazú"
                   fill
                   style={{ objectFit: 'cover' }}

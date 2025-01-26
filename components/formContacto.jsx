@@ -21,7 +21,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const { name, email, message } = formData
-    const mailtoLink = `mailto:christianspeziali@hotmail.com?subject=Nuevo mensaje de ${name}&body=${message}%0D%0A%0D%0AEmail de contacto: ${email}`
+    const mailtoLink = `mailto:juanynatyzapata@hotmail.com?subject=Nuevo mensaje de ${name}&body=${message}%0D%0A%0D%0AEmail de contacto: ${email}`
     window.location.href = mailtoLink
   }
 
@@ -86,11 +86,11 @@ export default function ContactForm() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-yellow-500" />
-                <span>christianspeziali@hotmail.com</span>
+                <span>juanynatyzapata@hotmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="h-5 w-5 text-yellow-500" />
-                <span>Lun - Dom: 7:00 AM - 10:00 PM</span>
+                <span>Lun - Dom: 7:00 - 22:00 hs</span>
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function ContactForm() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Calendar className="h-5 w-5 text-yellow-500" />
-                <span>Check-in: 14:00 - Check-out: 10:00</span>
+                <span>Check-in: 14:00 - Check-out: 10:00 hs</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CreditCard className="h-5 w-5 text-yellow-500" />
@@ -110,6 +110,10 @@ export default function ContactForm() {
               <div className="flex items-center space-x-2">
                 <HelpCircle className="h-5 w-5 text-yellow-500" />
                 <span>Atención permanente</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <HelpCircle className="h-5 w-5 text-yellow-500" />
+                <span>Pileta habilitada 365 dias del año</span>
               </div>
             </div>
           </div>
