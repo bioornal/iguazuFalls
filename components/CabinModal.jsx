@@ -73,7 +73,7 @@ export default function CabinModal({ cabin, onClose }) {
     <DialogContent className="sm:max-w-[1000px] max-h-[80vh] overflow-y-auto p-0 font-sans">
       <div className="flex flex-col lg:flex-row">
         {/* Columna izquierda: Galería de imágenes */}
-        <div className="lg:w-[63%] p-6">
+        <div className={`${cabin.name === "Piscina" ? 'lg:w-full' : 'lg:w-[63%]'} p-6`}>
           <div className="aspect-video relative mb-4 group bg-gray-100">
             <Image
               src={images[selectedImage].url}
@@ -112,57 +112,72 @@ export default function CabinModal({ cabin, onClose }) {
               </div>
             ))}
           </div>
+          {cabin.name === "Piscina" && (
+            <div className="mt-6">
+              <h2 className="text-3xl font-bold mb-4 text-green-800">{cabin.name}</h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">{cabin.description}</p>
+              <Button 
+                variant="outline" 
+                onClick={onClose} 
+                className="w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors duration-300 py-2 rounded-md font-medium mt-auto"
+              >
+                Cerrar
+              </Button>
+            </div>
+          )}
         </div>
 
-        {/* Columna derecha: Información de la cabaña */}
-        <div className="lg:w-[37%] p-6 bg-green-50 flex flex-col justify-between">
-          <div>
-            <h2 className="text-3xl font-bold mb-4 text-green-800">{cabin.name}</h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">{cabin.description}</p>
-            <Separator />
-            <div className="space-y-4 mb-6">
-              <div className="flex items-center">
-                <Users className="w-5 h-5 mr-3 text-green-600" />
-                <span className="font-medium">Capacidad:</span>
-                &nbsp;<span>{cabin.capacity}</span>
+        {/* Columna derecha: Información de la cabaña (solo para cabañas que no son piscina) */}
+        {cabin.name !== "Piscina" && (
+          <div className="lg:w-[37%] p-6 bg-green-50 flex flex-col justify-between">
+            <div>
+              <h2 className="text-3xl font-bold mb-4 text-green-800">{cabin.name}</h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">{cabin.description}</p>
+              <Separator />
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center">
+                  <Users className="w-5 h-5 mr-3 text-green-600" />
+                  <span className="font-medium">Capacidad:</span>
+                  &nbsp;<span>{cabin.capacity}</span>
+                </div>
+                <div className="flex items-center">
+                  <Maximize2 className="w-5 h-5 mr-3 text-green-600" />
+                  <span className="font-medium">Tamaño:</span>
+                  &nbsp;<span>{cabin.size}</span>
+                </div>
+                <div className="flex items-center">
+                  <Star className="w-5 h-5 mr-3 text-yellow-500" />
+                  <span className="font-medium">Calificación:</span>
+                  &nbsp;<span>{cabin.rating}</span>
+                </div>
               </div>
-              <div className="flex items-center">
-                <Maximize2 className="w-5 h-5 mr-3 text-green-600" />
-                <span className="font-medium">Tamaño:</span>
-                &nbsp;<span>{cabin.size}</span>
-              </div>
-              <div className="flex items-center">
-                <Star className="w-5 h-5 mr-3 text-yellow-500" />
-                <span className="font-medium">Calificación:</span>
-                &nbsp;<span>{cabin.rating}</span>
+              <Separator />
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-4 text-green-800">Amenidades</h3>
+                <ul className="grid grid-cols-1 gap-y-2">
+                  {cabin.amenities.map((amenity, index) => {
+                    const IconComponent = amenityIcons[amenity] || MapPin;
+                    return (
+                      <li key={index} className="flex items-center">
+                        <IconComponent className="mr-3 h-5 w-5 text-green-600" />
+                        <span className={`${amenity === 'Garage (Consultar disponibilidad)' ? 'bg-yellow-100 px-2 py-1 rounded-md font-medium' : ''}`}>
+                          {amenity}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             </div>
-            <Separator />
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-4 text-green-800">Amenidades</h3>
-              <ul className="grid grid-cols-1 gap-y-2">
-                {cabin.amenities.map((amenity, index) => {
-                  const IconComponent = amenityIcons[amenity] || MapPin;
-                  return (
-                    <li key={index} className="flex items-center">
-                      <IconComponent className="mr-3 h-5 w-5 text-green-600" />
-                      <span className={`${amenity === 'Garage (Consultar disponibilidad)' ? 'bg-yellow-100 px-2 py-1 rounded-md font-medium' : ''}`}>
-                        {amenity}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
+            <Button 
+              variant="outline" 
+              onClick={onClose} 
+              className="w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors duration-300 py-2 rounded-md font-medium mt-auto"
+            >
+              Cerrar
+            </Button>
           </div>
-          <Button 
-            variant="outline" 
-            onClick={onClose} 
-            className="w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors duration-300 py-2 rounded-md font-medium mt-auto"
-          >
-            Cerrar
-          </Button>
-        </div>
+        )}
       </div>
 
       {(zoomedImage || fullScreenZoom) && (

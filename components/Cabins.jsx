@@ -408,22 +408,26 @@ function Cabins() {
                                     height={300}
                                     className="w-full h-48 object-cover"
                                 />
-                                <div className="absolute top-0 right-0 bg-green-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">
-                                    {cabin.rating} ★
-                                </div>
+                                {cabin.name !== "Piscina" && (
+                                    <div className="absolute top-0 right-0 bg-green-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">
+                                        {cabin.rating} ★
+                                    </div>
+                                )}
                             </div>
                             <div className="p-4 flex flex-col flex-grow">
                                 <h3 className="subsection-title">{cabin.name}</h3>
                                 <p className="text-sm mt-1 flex-grow">{cabin.description}</p>
-                                <div className="flex justify-between items-center mt-2 text-sm">
-                                    <span>{cabin.capacity}</span>
-                                    <span>{cabin.size}</span>
-                                </div>
+                                {cabin.name !== "Piscina" && (
+                                    <div className="flex justify-between items-center mt-2 text-sm">
+                                        <span>{cabin.capacity}</span>
+                                        <span>{cabin.size}</span>
+                                    </div>
+                                )}
                                 <Button
                                     className="w-full mt-4 bg-green-400 hover:bg-green-700 text-white"
                                     onClick={() => handleOpenModal(cabin.id)}
                                 >
-                                    Ver Detalles
+                                    {cabin.name === "Piscina" ? "Ver Fotos" : "Ver Detalles"}
                                 </Button>
                             </div>
                         </div>
