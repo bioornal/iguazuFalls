@@ -74,12 +74,12 @@ export default function CabinModal({ cabin, onClose }) {
       <div className="flex flex-col lg:flex-row">
         {/* Columna izquierda: Galería de imágenes */}
         <div className="lg:w-[63%] p-6">
-          <div className="aspect-video relative mb-4 group">
+          <div className="aspect-video relative mb-4 group bg-gray-100">
             <Image
               src={images[selectedImage].url}
               alt={`${cabin.name} imagen principal`}
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
               className="rounded-lg cursor-zoom-in"
               onClick={handleZoom}
             />

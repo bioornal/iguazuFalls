@@ -351,7 +351,7 @@ const cabins = [
         name: "Piscina",
         description: "Piscina habilitada todo el año",
         capacity: "",
-        size: "²",
+        size: "",
         rating: 4.7,
         amenities: [""],
         images: [
