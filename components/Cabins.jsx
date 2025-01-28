@@ -346,6 +346,25 @@ const cabins = [
         images: [
         ]
     },
+    {
+        id: 12,
+        name: "Piscina",
+        description: "Piscina habilitada todo el año",
+        capacity: "",
+        size: "²",
+        rating: 4.7,
+        amenities: [""],
+        images: [
+            { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1738079940/Natalia/pileta/1_urdihj.jpg" },
+            { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1738079939/Natalia/pileta/7_lfdwgo.jpg" },
+            { id: 3, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1738079940/Natalia/pileta/8_czj9h6.jpg" },
+            { id: 4, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1738079939/Natalia/pileta/4_anb6jt.jpg" },
+            { id: 5, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1738079939/Natalia/pileta/5_oaxydy.jpg" },
+            { id: 6, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1738079939/Natalia/pileta/3_wgtr3s.jpg" },
+            { id: 7, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1738079939/Natalia/pileta/2_fs77ei.jpg" },
+            { id: 8, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1738079938/Natalia/pileta/6_i5uh7y.jpg" },
+        ]
+    },
 
 ].map(cabin => ({
     ...cabin,
