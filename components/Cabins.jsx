@@ -281,7 +281,7 @@ const cabins = [
         amenities: ["Wi-Fi", "Aire acondicionado","Microondas","Frigobar", "Baño privado", "TV por cable", "1 cama doble King", "2 camas individuales",],
         images: [
             { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737631330/Natalia/guembe/IMG-20250123-WA0025_quejcq.jpg" },
-            { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737631330/Natalia/guembe/IMG-20250123-WA0024_kmlsaq.jpg" },
+            { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606847/Natalia/guembe/nueva_rcwlc0.jpg" },
             { id: 3, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737631330/Natalia/guembe/IMG-20250123-WA0023_h71cvi.jpg" },
             { id: 4, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737631330/Natalia/guembe/IMG-20250123-WA0026_oxfloi.jpg" },
             { id: 5, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737631330/Natalia/guembe/IMG-20250123-WA0027_igtdrc.jpg" },
@@ -320,7 +320,18 @@ const cabins = [
         rating: 4.7,
         amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
-
+            { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606290/Natalia/cedro/1_pi8rjs.jpg" },
+            { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606291/Natalia/cedro/2_zqozmj.jpg" },
+            { id: 3, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606291/Natalia/cedro/3_yckufu.jpg" },
+            { id: 4, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606291/Natalia/cedro/4_nmns41.jpg" },
+            { id: 5, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606291/Natalia/cedro/5_wyeyn6.jpg" },
+            { id: 6, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606291/Natalia/cedro/6_pzao4o.jpg" },
+            { id: 7, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606290/Natalia/cedro/7_vj11fc.jpg" },
+            { id: 8, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606290/Natalia/cedro/8_heblsh.jpg" },
+            { id: 9, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606290/Natalia/cedro/9_iexcra.jpg" },
+            { id: 10, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606290/Natalia/cedro/10_tawvve.jpg" },
+            { id: 11, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606291/Natalia/cedro/11_wpiczh.jpg" },
+            { id: 12, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606290/Natalia/cedro/12_wmesn0.jpg" },
         ]
     },
     {
