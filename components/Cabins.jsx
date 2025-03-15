@@ -19,77 +19,74 @@ const cabins = [
         images: [
             {
                 id: 1,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/9.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067069/Natalia/ambay/9_bubpil.jpg"
             },
 
             {
                 id: 2,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/2.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067075/Natalia/ambay/16_ac3vqp.jpg"
             },
             {
                 id: 3,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/3.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067074/Natalia/ambay/15_whwxde.jpg"
             },
             {
                 id: 4,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/4.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067073/Natalia/ambay/14_iwawiu.jpg"
             },
             {
                 id: 5,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/5.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067072/Natalia/ambay/12_cxultq.jpg"
             },
             {
                 id: 6,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/6.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067071/Natalia/ambay/11_o0ndme.jpg"
             },
             {
                 id: 7,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/7.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067070/Natalia/ambay/10_pfb0hr.jpg"
             },
             {
                 id: 8,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/8.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067068/Natalia/ambay/7_nw1hp5.jpg"
             },
             {
                 id: 9,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/1.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067069/Natalia/ambay/8_nzdgw5.jpg"
             },
             {
                 id: 10,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/10.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067067/Natalia/ambay/6_aai5ta.jpg"
             },
             {
                 id: 11,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/11.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067066/Natalia/ambay/5_lhlcin.jpg"
             },
             {
                 id: 12,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/12.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067066/Natalia/ambay/4_immxil.jpg"
             },
             {
                 id: 13,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/13.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067065/Natalia/ambay/3_utvuxv.jpg"
             },
             {
                 id: 14,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/14.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067064/Natalia/ambay/1_w5q0ls.jpg"
             },
             {
                 id: 15,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/15.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067063/Natalia/ambay/18_ef0ffa.jpg"
             },
             {
                 id: 16,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/16.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067062/Natalia/ambay/17_crc51a.jpg"
             },
             {
                 id: 17,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/17.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742067064/Natalia/ambay/2_n1imhg.jpg"
             },
-            {
-                id: 18,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/4/18.jpg"
-            },
+
         ]
     },
     {
@@ -187,31 +184,23 @@ const cabins = [
         images: [
             {
                 id: 1,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0037.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066615/Natalia/guatambu/2_nzheuw.jpg"
             },
             {
                 id: 2,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0036.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066614/Natalia/guatambu/1_lzqusc.jpg"
             },
             {
                 id: 3,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240904-WA0038.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066614/Natalia/guatambu/4_od7biw.jpg"
             },
             {
                 id: 4,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0001.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066613/Natalia/guatambu/3_xmsmlo.jpg"
             },
             {
                 id: 5,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0002.jpg"
-            },
-            {
-                id: 6,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0003.jpg"
-            },
-            {
-                id: 7,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/7/IMG-20240907-WA0004.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066613/Natalia/guatambu/6_fumcvw.jpg"
             }
         ]
     },
@@ -227,47 +216,47 @@ const cabins = [
         images: [
             {
                 id: 1,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0022.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066847/Natalia/lapacho/IMG-20240904-WA0022_ggsbrp.jpg"
             },
             {
                 id: 2,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0024.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066849/Natalia/lapacho/IMG-20240904-WA0027_b9ngun.jpg"
             },
             {
                 id: 3,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0025.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066849/Natalia/lapacho/IMG-20240904-WA0026_y4oy3y.jpg"
             },
             {
                 id: 4,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0026.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066848/Natalia/lapacho/IMG-20240904-WA0025_n8tv8r.jpg"
             },
             {
                 id: 5,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0027.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066847/Natalia/lapacho/IMG-20240904-WA0024_spiqoq.jpg"
             },
             {
                 id: 6,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0029.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066846/Natalia/lapacho/IMG-20240904-WA0034_gr0zhl.jpg"
             },
             {
                 id: 7,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0030.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066845/Natalia/lapacho/IMG-20240904-WA0033_iiwkhi.jpg"
             },
             {
                 id: 8,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0031.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066845/Natalia/lapacho/IMG-20240904-WA0032_bdyobg.jpg"
             },
             {
                 id: 9,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0032.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066843/Natalia/lapacho/IMG-20240904-WA0029_m8n3w6.jpg"
             },
             {
                 id: 10,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0033.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066844/Natalia/lapacho/IMG-20240904-WA0030_ec9u1f.jpg"
             },
             {
                 id: 11,
-                url: "https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/9/IMG-20240904-WA0034.jpg"
+                url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066844/Natalia/lapacho/IMG-20240904-WA0031_amypq0.jpg"
             }
         ]
     },
