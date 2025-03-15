@@ -9,37 +9,37 @@ export default function About() {
     { 
       icon: Leaf, 
       text: "Experiencia única a minutos de la selva misionera", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066192/Natalia/about/selva_nomffd.png",
+      image: "/images/selva.png",
       description: "Sumérgete en la exuberante belleza de la selva misionera. Descubrí el canto de aves exóticas y disfruta de paseos por senderos naturales muy cerca de tu alojamiento."
     },
     { 
       icon: Star, 
       text: "Modernidad y simplicidad en ambientes relajados", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066223/Natalia/about/relajado_d5zhcr.jpg",
+      image: "/images/relajado.jpg",
       description: "Nuestros espacios combinan diseño contemporáneo con la calidez de la naturaleza. Relájate en ambientes que fusionan confort moderno y la serenidad del entorno."
     },
     { 
       icon: Home, 
       text: "Alojamientos bien equipados para parejas, familias y grupos", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066324/Natalia/about/IMG-20240904-WA0022_g4dtt9.jpg",
+      image: "/images/22.jpg",
       description: "Desde acogedoras suites para parejas hasta amplios departamentos para familias, ofrecemos opciones para todos. Cada espacio está cuidadosamente equipado para tu máxima comodidad."
     },
     { 
       icon: Users, 
       text: "Atención personalizada y cálida de nuestro equipo local", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066256/Natalia/about/atencion_bryjfp.jpg",
+      image: "/images/atencion.png",
       description: "Nuestro equipo de expertos locales está dedicado a hacer tu estancia inolvidable. Confía en nosotros para recomendaciones, asistencia y un servicio que supera expectativas."
     },
     { 
       icon: MapPin, 
       text: "Ubicación estratégica a solo 20 minutos de las Cataratas del Iguazú", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066257/Natalia/about/mapa_ggjwwh.png",
+      image: "/images/mapa.png",
       description: "Aprovecha nuestra ubicación privilegiada para visitar las majestuosas Cataratas del Iguazú. Estamos a un corto trayecto de una de las maravillas naturales del mundo."
     },
     { 
       icon: Car, 
       text: "Departamentos familiares con garage para tu tranquilidad", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066258/Natalia/about/garage_cfwplg.png",
+      image: "/images/garage.png",
       description: "Viaja con total tranquilidad sabiendo que tu vehículo estará seguro. Nuestros departamentos familiares incluyen garage privado para tu comodidad y seguridad."
     },
   ]

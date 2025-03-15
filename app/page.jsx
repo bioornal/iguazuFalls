@@ -29,7 +29,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center h-screen bg-white">
           <div className="mb-8">
             <Image
-              src="https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066108/Natalia/hero/LOGO_FONDO_jlibqw.png"
+              src="/images/LOGO_FONDO.png"
               alt="Logo de Iguazú Falls Duplex & Lodge"
               width={240}
               height={240}
