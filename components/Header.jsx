@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import logo from '/public/images/LOGO_FONDO.png'
+
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Image from "next/image"
 
-// Importar la imagen del logo
-import logoImage from '@/public/images/LOGO_FONDO.png'
 
 export default function HeroSection({ openWhatsApp }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -21,7 +19,7 @@ export default function HeroSection({ openWhatsApp }) {
       />
       <div className="absolute bottom-4 left-4 md:bottom-10 md:left-10 lg:bottom-16 lg:left-16 z-10">
         <Image
-          src={logoImage}
+          src="https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066108/Natalia/hero/LOGO_FONDO_jlibqw.png"
           alt="Logo de Iguazú Falls Duplex & Lodge"
           width={240}
           height={240}
