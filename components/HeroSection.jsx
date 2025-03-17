@@ -11,7 +11,6 @@ export default function HeroSection({ openWhatsApp }) {
   return (
     <section className="w-full h-[30vh] md:h-[80vh] flex items-center justify-center bg-gray-900 bg-opacity-50 bg-blend-overlay relative overflow-hidden">
       <Image
-        // src="https://fogon-food-ordering.s3.sa-east-1.amazonaws.com/IguazuFalls/HeroImages/pileta1.jpg"
         src="https://res.cloudinary.com/djtvjkcu6/image/upload/v1737465376/Natalia/pileta3_a4f3w2.jpg"
         alt="Piscina de Iguazú Falls Duplex & Lodge"
         fill
@@ -22,7 +21,7 @@ export default function HeroSection({ openWhatsApp }) {
       />
       <div className="absolute bottom-4 left-4 md:bottom-10 md:left-10 lg:bottom-16 lg:left-16 z-10">
         <Image
-            src="/images/LOGO_FONDO.png"
+            src="/images/garage.png"
           alt="Logo de Iguazú Falls Duplex & Lodge"
           width={240}
           height={240}
