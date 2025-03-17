@@ -29,10 +29,12 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center h-screen bg-white">
           <div className="mb-8">
             <Image
+              sizes="100vw"
               src="/images/LOGO_FONDO.png"
               alt="Logo de Iguazú Falls Duplex & Lodge"
               width={240}
               height={240}
+              priority
               className="w-60 h-60"
             />
           </div>

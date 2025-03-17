@@ -13,6 +13,7 @@ export default function HeroSection({ openWhatsApp }) {
         src="https://res.cloudinary.com/djtvjkcu6/image/upload/v1737465376/Natalia/pileta3_a4f3w2.jpg"
         alt="Piscina de Iguazú Falls Duplex & Lodge"
         fill
+        sizes="100vw"
         style={{ objectFit: 'cover' }}
         quality={100}
         priority

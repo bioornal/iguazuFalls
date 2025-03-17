@@ -68,6 +68,7 @@ export default function About() {
                   src="https://res.cloudinary.com/djtvjkcu6/image/upload/v1737901892/Natalia/pileta/about_grf7nz.jpg"
                   alt="Paisaje de Iguazú"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: 'cover' }}
                 />
               </div>
@@ -98,6 +99,7 @@ function FeatureCard({ item }) {
           src={item.image}
           alt={item.text}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           style={{ objectFit: 'cover' }}
         />
         <div className="absolute top-2 left-2 bg-white rounded-full p-2">
