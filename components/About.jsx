@@ -2,44 +2,52 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Leaf, MapPin, Star, Home, Users, Car } from "lucide-react"
 import Image from "next/image"
-import pileta from '/public/images/pileta.jpg'
+
+// Importar correctamente las imágenes locales
+import piletaImage from '@/public/images/pileta.jpg'
+import selvaImage from '@/public/images/selva.png'
+import relajadoImage from '@/public/images/relajado.jpg'
+import image22 from '@/public/images/22.jpg'
+import atencionImage from '@/public/images/atencion.png'
+import mapaImage from '@/public/images/mapa.png'
+import garageImage from '@/public/images/garage.png'
 
 export default function About() {
   const features = [
     { 
       icon: Leaf, 
       text: "Experiencia única a minutos de la selva misionera", 
-      image: "/images/selva.png",
+      image: selvaImage,
       description: "Sumérgete en la exuberante belleza de la selva misionera. Descubrí el canto de aves exóticas y disfruta de paseos por senderos naturales muy cerca de tu alojamiento."
     },
     { 
       icon: Star, 
       text: "Modernidad y simplicidad en ambientes relajados", 
-      image: "/images/relajado.jpg",
+      image: relajadoImage,
       description: "Nuestros espacios combinan diseño contemporáneo con la calidez de la naturaleza. Relájate en ambientes que fusionan confort moderno y la serenidad del entorno."
     },
     { 
       icon: Home, 
       text: "Alojamientos bien equipados para parejas, familias y grupos", 
-      image: "/images/22.jpg",
+      image: image22,
       description: "Desde acogedoras suites para parejas hasta amplios departamentos para familias, ofrecemos opciones para todos. Cada espacio está cuidadosamente equipado para tu máxima comodidad."
     },
     { 
       icon: Users, 
       text: "Atención personalizada y cálida de nuestro equipo local", 
-      image: "/images/atencion.png",
+      image: atencionImage,
       description: "Nuestro equipo de expertos locales está dedicado a hacer tu estancia inolvidable. Confía en nosotros para recomendaciones, asistencia y un servicio que supera expectativas."
     },
     { 
       icon: MapPin, 
       text: "Ubicación estratégica a solo 20 minutos de las Cataratas del Iguazú", 
-      image: "/images/mapa.png",
+      image: mapaImage,
       description: "Aprovecha nuestra ubicación privilegiada para visitar las majestuosas Cataratas del Iguazú. Estamos a un corto trayecto de una de las maravillas naturales del mundo."
     },
     { 
       icon: Car, 
       text: "Departamentos familiares con garage para tu tranquilidad", 
-      image: "/images/garage.png",
+      image: garageImage,
       description: "Viaja con total tranquilidad sabiendo que tu vehículo estará seguro. Nuestros departamentos familiares incluyen garage privado para tu comodidad y seguridad."
     },
   ]
