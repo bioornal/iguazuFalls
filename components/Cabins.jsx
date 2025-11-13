@@ -332,7 +332,12 @@ const cabins = [
         rating: 4.7,
         amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
-
+            { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763040391/Natalia/ombu/1_dwzdja.jpg" },
+            { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763040391/Natalia/ombu/2_rqjoxk.jpg" },
+            { id: 3, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763040391/Natalia/ombu/3_xnnxro.jpg" },
+            { id: 4, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763040391/Natalia/ombu/4_a1mzmd.jpg" },
+            { id: 5, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763040391/Natalia/ombu/5_jevzpg.jpg" },
+            { id: 6, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763040391/Natalia/ombu/6_xpguhs.jpg" },
         ]
     },
     {
