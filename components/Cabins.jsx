@@ -344,6 +344,17 @@ const cabins = [
         rating: 4.7,
         amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
+            { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037558/Natalia/pitanga/IMG-20251113-WA0009_ffmopn.jpg" },
+            { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037562/Natalia/pitanga/IMG-20251113-WA0011_otggui.jpg" },
+            { id: 3, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037566/Natalia/pitanga/IMG-20251113-WA0012_rmypmc.jpg" },
+            { id: 4, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037567/Natalia/pitanga/IMG-20251113-WA0015_vpeexl.jpg" },
+            { id: 5, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037572/Natalia/pitanga/IMG-20251113-WA0010_aydpnj.jpg" },
+            { id: 6, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037576/Natalia/pitanga/IMG-20251113-WA0007_wgyzhw.jpg" },
+            { id: 7, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037582/Natalia/pitanga/IMG-20251113-WA0003_peslqw.jpg" },
+            { id: 8, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037582/Natalia/pitanga/IMG-20251113-WA0005_txaa0b.jpg" },
+            { id: 9, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037582/Natalia/pitanga/IMG-20251113-WA0004_dknfqd.jpg" },
+            { id: 10, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037583/Natalia/pitanga/IMG-20251113-WA0002_wshoj7.jpg" },
+            { id: 11, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037583/Natalia/pitanga/IMG-20251113-WA0001_ztru0q.jpg" },
         ]
     },
     {
