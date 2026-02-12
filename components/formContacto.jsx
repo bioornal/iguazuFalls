@@ -21,7 +21,7 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const { name, email, message } = formData
-    const mailtoLink = `mailto:nataliazpezialiiguazu@gmail.com?subject=Nuevo mensaje de ${name}&body=${message}%0D%0A%0D%0AEmail de contacto: ${email}`
+    const mailtoLink = `mailto:iguazufallslodge@gmail.com?subject=Nuevo mensaje de ${name}&body=${message}%0D%0A%0D%0AEmail de contacto: ${email}`
     window.location.href = mailtoLink
   }
 
@@ -86,7 +86,7 @@ export default function ContactForm() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-yellow-500" />
-                <span>nataliazpezialiiguazu@gmail.com</span>
+                <span>iguazufallslodge@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="h-5 w-5 text-yellow-500" />
