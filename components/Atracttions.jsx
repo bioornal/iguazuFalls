@@ -18,7 +18,7 @@ const attractions = [
     icon: <TreePine className="h-6 w-6 sm:h-8 sm:w-8 text-green-600" />,
     distance: "10 minutos",
     url: "http://www.aripuca.com.ar/",
-    image: "https://excursioneseniguazu.com.ar/imagenes/aripuca-puerto-iguazu/aripuca-de-iguazu.jpg"
+    image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1785091581/Natalia/aripuca_r1cuiy.jpg"
   },
   {
     name: "Güirá Oga",
