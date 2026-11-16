@@ -1,114 +1,73 @@
-import React, { useState, useEffect } from 'react'
-import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import Image from "next/image";
+'use client';
 
+import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
+import { waLink } from '@/lib/site';
 
-function Header() {
+const menuItems = [
+  { name: 'El alojamiento', href: '#about' },
+  { name: 'Dúplex y lodges', href: '#cabins' },
+  { name: 'Atracciones', href: '#attractions' },
+  { name: 'Contacto', href: '#contact' },
+  { name: 'Cómo llegar', href: '#ubicacion' },
+];
+
+export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [atTop, setAtTop] = useState(true);
+  const toggleRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 50);
-    };
+    function syncHeader() {
+      setAtTop(window.scrollY < 12);
+    }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    syncHeader();
+    window.addEventListener('scroll', syncHeader, { passive: true });
+    return () => window.removeEventListener('scroll', syncHeader);
   }, []);
 
-  const openWhatsApp = () => {
-    const phoneNumber = "5493757570534";
-    const message = encodeURIComponent("Hola, me gustaría hacer una reserva en Iguazu Falls.");
-    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-  };
-
-  const menuItems = [
-    { name: 'Sobre Nosotros', href: '#about' },
-    { name: 'Lodges', href: '#cabins' },
-    { name: 'Atracciones', href: '#attractions' },
-    { name: 'Contacto', href: '#contact' }
-  ];
+  function handleKeyDown(event) {
+    if (event.key === 'Escape' && mobileMenuOpen) {
+      setMobileMenuOpen(false);
+      toggleRef.current?.focus();
+    }
+  }
 
   return (
-    <header className={`fixed w-full px-3 sm:px-6 lg:px-12 h-16 sm:h-20 lg:h-24 flex items-center justify-between transition-all duration-300 z-50
-        bg-white bg-opacity-60 backdrop-blur-[10px]
-  font-sans`}>
-      <Link className="flex items-center" href="#">
-        {/* <Image
-          src="/images/LOGO_FONDO.png"
-          alt="Iguazu Falls Cabins Logo"
-          width={80}
-          height={80}
-          className="h-20 w-auto"
-        /> */}
-        <h2 className="text-[14px] sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light">Iguazu Falls Duplex & Lodge</h2>
-        <span className={`ml-2 sm:ml-4 text-lg sm:text-xl font-semibold ${isScrolled ? 'text-green-800' : 'text-white'}`}>
-
-        </span>
-      </Link>
-      <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-6">
-        <nav className="hidden lg:flex gap-4 lg:gap-6">
-          {menuItems.map((item) => (
-            <Link
-              key={item.name}
-              className={`text-xs sm:text-sm font-medium hover:underline underline-offset-4 transition-colors duration-300 ${isScrolled ? 'text-green-950' : 'text-white'}`}
-              href={item.href}
-            >
-              {item.name}
-            </Link>
+    <header className="site-header nav" data-at-top={atTop && !mobileMenuOpen} onKeyDown={handleKeyDown}>
+      <div className="wrap site-header-inner">
+        <a className="skip-link" href="#contenido">Ir al contenido</a>
+        <a className="site-brand nav__logo" href="#inicio" aria-label="Iguazú Falls Duplex & Lodge, inicio" onClick={() => setMobileMenuOpen(false)}>
+          <Image src="/images/logo.png" width={80} height={80} alt="" priority />
+          <span className="site-brand-name">Iguazú Falls<small>DUPLEX &amp; LODGE</small></span>
+        </a>
+        <nav id="site-navigation" className="site-navigation" aria-label="Navegación principal" data-open={mobileMenuOpen}>
+          {menuItems.map(({ name, href }) => (
+            <a key={href} href={href} onClick={() => setMobileMenuOpen(false)}>{name}</a>
           ))}
         </nav>
-        <button
-          onClick={openWhatsApp}
-          className={`transition-all duration-300 px-3 sm:px-4 lg:px-6 py-1 sm:py-2 rounded-full text-xs sm:text-sm ${isScrolled
-            ? 'bg-green-800 text-white hover:bg-green-600'
-            : 'bg-white bg-opacity-20 text-white hover:bg-opacity-30'
-            } border border-white font-medium`}
-        >
-          Reservar Ahora
-        </button>
-        <div className="relative lg:hidden">
+        <div className="site-header-actions">
+          <a className="site-reserve" href={waLink()} target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp" onClick={() => setMobileMenuOpen(false)}>
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.05 2a9.9 9.9 0 0 0-8.58 14.84L2 22l5.29-1.39A9.94 9.94 0 1 0 12.05 2zm0 18.05a8.18 8.18 0 0 1-4.16-1.14l-.3-.18-3.14.82.84-3.04-.2-.32a8.25 8.25 0 1 1 6.96 3.86zm4.52-6.13c-.25-.12-1.47-.73-1.7-.82-.23-.08-.4-.12-.56.13-.17.24-.64.8-.79.96-.14.17-.29.19-.53.06-.25-.12-1.05-.38-2-1.22-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.38-.43.12-.15.16-.25.24-.41.08-.17.04-.32-.02-.44-.06-.13-.56-1.35-.76-1.85-.2-.48-.41-.42-.56-.43l-.48-.01c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.23.89 2.41 1.02 2.57.12.17 1.75 2.67 4.23 3.75.6.25 1.06.4 1.42.51.6.2 1.14.17 1.57.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.17-.47-.29z" />
+            </svg>
+            <span>WhatsApp</span>
+          </a>
           <button
+            ref={toggleRef}
+            type="button"
+            className="menu-toggle"
+            aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="site-navigation"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="focus:outline-none transition-colors duration-300 hover:bg-opacity-20 hover:bg-white rounded-full p-1 sm:p-2"
           >
-            {mobileMenuOpen ? (
-              <X className={`h-5 w-5 sm:h-6 sm:w-6 ${isScrolled ? 'text-green-800' : 'text-white'}`} />
-            ) : (
-              <Menu className={`h-5 w-5 sm:h-6 sm:w-6 ${isScrolled ? 'text-green-800' : 'text-white'}`} />
-            )}
+            {mobileMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           </button>
-
-          {/* Menú móvil */}
-          {mobileMenuOpen && (
-            <div className="absolute right-0 mt-2 w-40 sm:w-48 bg-white rounded-md shadow-lg py-1 z-50">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 sm:px-4 py-2 text-xs sm:text-sm text-gray-700 hover:bg-gray-100"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <button
-                onClick={() => {
-                  openWhatsApp();
-                  setMobileMenuOpen(false);
-                }}
-                className="block w-full text-left px-3 sm:px-4 py-2 text-xs sm:text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Reservar Ahora
-              </button>
-            </div>
-          )}
         </div>
       </div>
     </header>
-  )
+  );
 }
-
-export default Header

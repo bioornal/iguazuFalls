@@ -1,31 +1,37 @@
-import React, { useState, useEffect } from 'react'
-import Image from "next/image"
+import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
+import { waLink } from '@/lib/site';
 
-
-export default function HeroSection({ openWhatsApp }) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+export default function HeroSection() {
   return (
-    <section className="w-full h-[30vh] md:h-[80vh] flex items-center justify-center bg-gray-900 bg-opacity-50 bg-blend-overlay relative overflow-hidden">
-      <Image
-        src="https://res.cloudinary.com/djtvjkcu6/image/upload/v1737465376/Natalia/pileta3_a4f3w2.jpg"
-        alt="Piscina de Iguazú Falls Duplex & Lodge"
-        fill
-        sizes="100vw"
-        style={{ objectFit: 'cover' }}
-        quality={100}
-        priority
-        className="transition-opacity duration-1000 opacity-100"
-      />
-      <div className="absolute bottom-4 left-4 md:bottom-10 md:left-10 lg:bottom-16 lg:left-16 z-10">
-        <Image
-          src="https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066108/Natalia/hero/LOGO_FONDO_jlibqw.png"
-          alt="Logo de Iguazú Falls Duplex & Lodge"
-          width={240}
-          height={240}
-          className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-60 xl:h-60 opacity-85 hover:opacity-100 transition-opacity duration-300"
+    <section className="hero" id="inicio" aria-labelledby="hero-title" data-enter>
+      <picture className="hero-photo hero__media" data-visual>
+        <source
+          type="image/webp"
+          srcSet="/images/piscina-hero-parrilla-800.webp 800w, /images/piscina-hero-parrilla-1600.webp 1600w, /images/piscina-hero-parrilla-2400.webp 2400w, /images/piscina-hero-parrilla-4k.webp 4096w"
+          sizes="100vw"
         />
+        <Image
+          src="/images/piscina-hero-parrilla.jpg"
+          alt="Piscina al aire libre de Iguazú Falls Duplex & Lodge"
+          width={1600}
+          height={900}
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+        />
+      </picture>
+      <div className="hero-panel">
+        <div className="wrap hero-content">
+          <h1 id="hero-title">Después de pasear,<br /> volvé a descansar</h1>
+          <div className="hero-intro">
+            <p className="t-lead">En nuestro complejo podés refrescarte en la pileta y bajar el ritmo al aire libre.</p>
+            <a className="button btn btn--primary" href={waLink()} target="_blank" rel="noopener noreferrer">
+              Consultar disponibilidad <ArrowUpRight aria-hidden="true" size={18} />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
-  )
+  );
 }

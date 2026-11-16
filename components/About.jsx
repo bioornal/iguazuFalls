@@ -1,109 +1,40 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Leaf, MapPin, Star, Home, Users, Car } from "lucide-react"
-import Image from "next/image"
+import Image from 'next/image';
 
+const features = [
+  { image: 'selva', title: 'Selva misionera', description: 'Senderos y espacios naturales para recorrer en los alrededores.' },
+  { image: 'descanso', title: 'Pileta al aire libre', description: 'Un lugar para descansar, con pileta habilitada todo el año.' },
+  { image: 'alojamiento', title: 'Espacios equipados', description: 'Opciones para parejas, familias y grupos, con Wi-Fi y aire acondicionado.' },
+  { image: 'atencion', title: 'Atención local', description: 'Podés pedirnos recomendaciones para tus recorridos.' },
+  { image: 'cataratas', title: 'Cerca de las Cataratas', description: 'El Parque Nacional Iguazú está a unos 20 minutos.' },
+  { image: 'garage', title: 'Garage', description: 'Consultanos por disponibilidad para tu vehículo.' },
+];
 
 export default function About() {
-  const features = [
-    { 
-      icon: Leaf, 
-      text: "Experiencia única a minutos de la selva misionera", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066192/Natalia/about/selva_nomffd.png",
-      description: "Sumérgete en la exuberante belleza de la selva misionera. Descubrí el canto de aves exóticas y disfruta de paseos por senderos naturales muy cerca de tu alojamiento."
-    },
-    { 
-      icon: Star, 
-      text: "Modernidad y simplicidad en ambientes relajados", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066223/Natalia/about/relajado_d5zhcr.jpg",
-      description: "Nuestros espacios combinan diseño contemporáneo con la calidez de la naturaleza. Relájate en ambientes que fusionan confort moderno y la serenidad del entorno."
-    },
-    { 
-      icon: Home, 
-      text: "Alojamientos bien equipados para parejas, familias y grupos", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066324/Natalia/about/IMG-20240904-WA0022_g4dtt9.jpg",
-      description: "Desde acogedoras suites para parejas hasta amplios departamentos para familias, ofrecemos opciones para todos. Cada espacio está cuidadosamente equipado para tu máxima comodidad."
-    },
-    { 
-      icon: Users, 
-      text: "Atención personalizada y cálida de nuestro equipo local", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066256/Natalia/about/atencion_bryjfp.jpg",
-      description: "Nuestro equipo de expertos locales está dedicado a hacer tu estancia inolvidable. Confía en nosotros para recomendaciones, asistencia y un servicio que supera expectativas."
-    },
-    { 
-      icon: MapPin, 
-      text: "Ubicación estratégica a solo 20 minutos de las Cataratas del Iguazú", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066257/Natalia/about/mapa_ggjwwh.png",
-      description: "Aprovecha nuestra ubicación privilegiada para visitar las majestuosas Cataratas del Iguazú. Estamos a un corto trayecto de una de las maravillas naturales del mundo."
-    },
-    { 
-      icon: Car, 
-      text: "Departamentos familiares con garage para tu tranquilidad", 
-      image: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1742066258/Natalia/about/garage_cfwplg.png",
-      description: "Viaja con total tranquilidad sabiendo que tu vehículo estará seguro. Nuestros departamentos familiares incluyen garage privado para tu comodidad y seguridad."
-    },
-  ]
-
   return (
-    <>
-      <div className="absolute inset-x-0 top-0 bottom-0 z-0"></div>
-      <section className="relative bg-gradient-to-t from-gray-800 via-gray-50 to-transparent z-10 -mt-16 md:-mt-24 lg:-mt-25">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-            <div className="space-y-6 lg:mt-40 md:mt-36 mt-24">
-              <h2 className="text-[40px] font-semibold text-gray-100 bg-green-400 py-4 px-4 rounded-lg">Sobre nosotros</h2>
-              <p className="text-sm sm:text-lg text-black text-justify">
-                Iguazu Falls Duplex & Lodge es un refugio encantador ubicado a pocos minutos de las imponentes Cataratas del Iguazú. Cada una de nuestros departamentos ha sido diseñado con un toque elegante y moderno, brindando comodidad y confort en la ciudad natural incomparable de Iguazú. Todos cuentan con Wi-Fi gratuito y equipamiento premium para que disfrutes de una estancia placentera. Además de los acogedoras departamentos, ofrecemos una piscina al aire libre, creando el ambiente perfecto para relajarte.
-              </p>
-              <div className="relative h-64 rounded-lg overflow-hidden">
-                <Image
-                  src="https://res.cloudinary.com/djtvjkcu6/image/upload/v1737901892/Natalia/pileta/about_grf7nz.jpg"
-                  alt="Paisaje de Iguazú"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
-                />
+    <section id="about" className="section-space about" aria-labelledby="about-title">
+      <div className="wrap about-layout">
+        <div className="about-intro">
+          <h2 className="section-title" id="about-title">Tu estadía en Iguazú</h2>
+          <p>Nuestros departamentos tienen aire acondicionado y baño privado. Si viajás en pareja, en familia o con amigos, podés elegir el espacio que te resulte más cómodo.</p>
+        </div>
+        <figure className="about-photo" data-moment="picture-develops">
+          <Image src="/images/piscina-lodge.webp" alt="Vista del espacio exterior de Iguazú Falls Duplex & Lodge" fill sizes="(min-width: 1150px) 40vw, 90vw" />
+        </figure>
+        <ul className="about-features" aria-label="Servicios y entorno" aria-describedby="about-image-note">
+          {features.map(({ image, title, description }) => (
+            <li className="about-feature" key={image}>
+              <div className="about-feature-image">
+                <Image src={'/images/estadia/' + image + '.webp'} alt="" fill sizes="(min-width: 1150px) 18vw, (min-width: 640px) 32vw, 90vw" />
               </div>
-            </div>
-            <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {features.map((item, index) => (
-                <FeatureCard key={index} item={item} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
-
-function FeatureCard({ item }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5 }}
-      className="bg-white rounded-lg shadow-xl overflow-hidden"
-    >
-      <div className="relative h-32">
-        <Image
-          src={item.image}
-          alt={item.text}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          style={{ objectFit: 'cover' }}
-        />
-        <div className="absolute top-2 left-2 bg-white rounded-full p-2">
-          <item.icon className="text-blue-600 w-4 h-4" />
-        </div>
+              <div className="about-feature-copy">
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <p className="sr-only" id="about-image-note">Las imágenes de los servicios son ilustrativas.</p>
       </div>
-      <div className="p-3">
-        <h3 className="font-bold text-sm mb-1">{item.text}</h3>
-        <p className="text-xs text-gray-600 ">
-          {item.description}
-        </p>
-      </div>
-    </motion.div>
-  )
+    </section>
+  );
 }

@@ -1,15 +1,32 @@
-import React from 'react'
+import Image from 'next/image'
+import { SITE_NAME } from '@/lib/site'
+import styles from './Visit.module.css'
 
-function Footer() {
+const links = [
+  { label: 'Alojamientos', href: '#cabins' },
+  { label: 'Atracciones', href: '#attractions' },
+  { label: 'Contacto', href: '#contact' },
+  { label: 'Ubicación', href: '#ubicacion' },
+]
+
+export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-8 font-sans">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="mt-8 pt-8 border-t border-green-700 text-center">
-          <p className="text-sm">&copy; 2024 Iguazu Falls Duplex & Lodge | <a href="https://selva-digital.vercel.app/" target="_blank" rel="noopener noreferrer" className="italic font-normal text-green-400 hover:text-green-300">Selva Digital Diseños.</a></p>
+    <footer className={'closing ' + styles.footer}>
+      <div className="wrap">
+        <div className={styles.footerMain}>
+          <div className={styles.footerBrand}>
+            <Image src="/images/logo.png" alt="" width={76} height={76} />
+            <span>{SITE_NAME}</span>
+          </div>
+          <nav aria-label="Navegación del pie de página" className={styles.footerNav}>
+            {links.map(({ href, label }) => <a key={href} href={href}>{label}</a>)}
+          </nav>
+        </div>
+        <div className={styles.legal}>
+          <p>© {new Date().getUTCFullYear()} {SITE_NAME}</p>
+          <a className={styles.designerLink} href="https://selva-digital.vercel.app/" target="_blank" rel="noopener noreferrer">Selva Digital Diseños</a>
         </div>
       </div>
     </footer>
   )
 }
-
-export default Footer

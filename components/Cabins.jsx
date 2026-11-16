@@ -1,21 +1,21 @@
-import React, { useState } from 'react'
-import { Button } from "@/components/ui/Button"
-import { Dialog } from "@/components/ui/Dialog"
-import Image from 'next/image'
-import CabinModal from './CabinModal';
-import backgroundImage from '/public/images/grande.svg'
+'use client';
 
-const defaultImage = "/images/no-image.jpg"
+import Image from 'next/image';
+import { useState } from 'react';
+import { ArrowUpRight, Maximize2, Star, Users } from 'lucide-react';
+import { Dialog, DialogTrigger } from '@/components/ui/Dialog';
+import CabinModal from './CabinModal';
+import styles from './Stay.module.css';
 
 const cabins = [
     {
         id: 1,
         name: "Lodge Ambay",
-        description: "Departamento acogedor de dos habitaciones",
+        description: "Dos habitaciones",
         capacity: "2 a 4 personas",
         size: "30 m²",
         rating: 4.5,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta", "TV por cable", "Garage (Consultar disponibilidad)"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcón privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta", "TV por cable", "Garage (Consultar disponibilidad)"],
         images: [
             {
                 id: 1,
@@ -91,12 +91,12 @@ const cabins = [
     },
     {
         id: 2,
-        name: "Lodge Palo rosa",
-        description: "Departamento acogedor de dos habitaciones",
+        name: "Lodge Palo Rosa",
+        description: "Dos habitaciones",
         capacity: "2 a 4 personas",
         size: "30 m²",
         rating: 4.5,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta", "TV por cable", "Garage (Consultar disponibilidad)"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcón privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta", "TV por cable", "Garage (Consultar disponibilidad)"],
         images: [
             {
                 id: 1,
@@ -138,11 +138,11 @@ const cabins = [
     {
         id: 6,
         name: "Lodge Araucaria",
-        description: "Departamento moderno de una habitación",
+        description: "Una habitación",
         capacity: "1 a 4 personas",
         size: "25 m²",
         rating: 4.6,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble King", , "Sala comedor: 1 sofá cama", "TV por cable"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble King", "Sala comedor: 1 sofá cama", "TV por cable"],
         images: [
             { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737470051/Natalia/araucaria/2_soyvu4.jpg" },
             { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737470051/Natalia/araucaria/4_zg3ug5.jpg" },
@@ -156,7 +156,7 @@ const cabins = [
     {
         id: 7,
         name: "Lodge Timbó",
-        description: "Departamento moderno de una habitación",
+        description: "Una habitación",
         capacity: "1 a 2 personas",
         size: "20 m²",
         rating: 4.6,
@@ -175,12 +175,12 @@ const cabins = [
     },
     {
         id: 4,
-        name: "Lodge Guatambú ",
-        description: "Departamento moderno de una habitación",
+        name: "Lodge Guatambú",
+        description: "Una habitación",
         capacity: "1 a 4 personas",
         size: "25 m²",
         rating: 4.6,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble King", , "Sala comedor: 1 sofá cama", "TV por cable"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble King", "Sala comedor: 1 sofá cama", "TV por cable"],
         images: [
             {
                 id: 1,
@@ -280,11 +280,11 @@ const cabins = [
     {
         id: 8,
         name: "Duplex Laurel",
-        description: "Duplex confortable de 2 plantas",
+        description: "Dúplex de dos plantas",
         capacity: "2 a 6 personas",
         size: "50 m²",
         rating: 4.7,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcón privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
             { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632671/Natalia/laurel/7_r0umc1.jpg" },
             { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1737632672/Natalia/laurel/8_uw8mam.jpg" },
@@ -303,11 +303,11 @@ const cabins = [
     {
         id: 9,
         name: "Duplex Cedro",
-        description: "Duplex confortable de 2 plantas",
+        description: "Dúplex de dos plantas",
         capacity: "2 a 6 personas",
         size: "50 m²",
         rating: 4.7,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcón privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
             { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606290/Natalia/cedro/1_pi8rjs.jpg" },
             { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1740606291/Natalia/cedro/2_zqozmj.jpg" },
@@ -326,11 +326,11 @@ const cabins = [
     {
         id: 10,
         name: "Duplex Ombú",
-        description: "Duplex confortable de 2 plantas",
+        description: "Dúplex de dos plantas",
         capacity: "2 a 6 personas",
         size: "50 m²",
         rating: 4.7,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcón privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
             { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763040391/Natalia/ombu/1_dwzdja.jpg" },
             { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763040391/Natalia/ombu/2_rqjoxk.jpg" },
@@ -343,11 +343,11 @@ const cabins = [
     {
         id: 11,
         name: "Duplex Pitanga",
-        description: "Duplex confortable de 2 plantas",
+        description: "Dúplex de dos plantas",
         capacity: "2 a 6 personas",
         size: "50 m²",
         rating: 4.7,
-        amenities: ["Wi-Fi", "Aire acondicionado", "Balcon privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", , "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
+        amenities: ["Wi-Fi", "Aire acondicionado", "Balcón privado", "Cocina equipada", "Baño privado", "Dormitorio 1: 1 cama doble grande Queen", "Dormitorio 2: 1 cama cucheta y 2 camas individuales con opción a 1 cama matrimonial", "TV por cable"],
         images: [
             { id: 1, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037558/Natalia/pitanga/IMG-20251113-WA0009_ffmopn.jpg" },
             { id: 2, url: "https://res.cloudinary.com/djtvjkcu6/image/upload/v1763037562/Natalia/pitanga/IMG-20251113-WA0011_otggui.jpg" },
@@ -382,82 +382,86 @@ const cabins = [
         ]
     },
 
-].map(cabin => ({
-    ...cabin,
-    amenities: cabin.amenities.includes("Garage (Consultar disponibilidad)") 
-        ? cabin.amenities 
-        : [...cabin.amenities, "Garage (Consultar disponibilidad)"],
-    images: cabin.images && cabin.images.length > 0
-        ? cabin.images
-        : [{ id: 'default', url: defaultImage }]
-}));
+];
 
+const categoryPrefixes = { Lodges: 'Lodge', Estudios: 'Studio', Dúplex: 'Duplex' };
+const categories = ['Todos', ...Object.keys(categoryPrefixes)];
 
-function Cabins() {
-    const [openModal, setOpenModal] = useState(null)
+export default function Cabins() {
+    const [selectedCategory, setSelectedCategory] = useState('Todos');
+    const visibleCabins = selectedCategory === 'Todos'
+        ? cabins
+        : cabins.filter(({ name }) => name.startsWith(categoryPrefixes[selectedCategory]));
 
-    const handleOpenModal = (cabinId) => {
-        setOpenModal(cabinId);
-    }
-
-    const handleCloseModal = () => {
-        setOpenModal(null);
-    }
 
     return (
-        <section
-            id="cabins"
-            className="w-full py-12 md:py-16 lg:py-20 relative bg-gray-800"
-        >
-            <div className="container px-4 md:px-6 mx-auto relative z-10">
-                <h2 className="section-title text-center text-gray-50 bg-green-400 py-2 px-4 rounded-lg md:text-left mb-12">
-                    Duplex & Lodges
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                    {cabins.map((cabin) => (
-                        <div key={cabin.id} className="rounded-lg overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-xl flex flex-col h-full">
-                            <div className="relative cursor-pointer" onClick={() => handleOpenModal(cabin.id)}>
-                                <Image
-                                    src={cabin.images[0]?.url || defaultImage}
-                                    alt={cabin.name}
-                                    width={400}
-                                    height={300}
-                                    className="w-full h-48 object-cover"
-                                />
-                                {cabin.name !== "Piscina" && (
-                                    <div className="absolute top-0 right-0 bg-green-500 text-white px-2 py-1 text-xs font-semibold rounded-bl-lg">
-                                        {cabin.rating} ★
-                                    </div>
-                                )}
-                            </div>
-                            <div className="p-4 flex flex-col flex-grow">
-                                <h3 className="subsection-title">{cabin.name}</h3>
-                                <p className="text-sm mt-1 flex-grow">{cabin.description}</p>
-                                {cabin.name !== "Piscina" && (
-                                    <div className="flex justify-between items-center mt-2 text-sm">
-                                        <span>{cabin.capacity}</span>
-                                        <span>{cabin.size}</span>
-                                    </div>
-                                )}
-                                <Button
-                                    className="w-full mt-4 bg-green-400 hover:bg-green-700 text-white"
-                                    onClick={() => handleOpenModal(cabin.id)}
-                                >
-                                    {cabin.name === "Piscina" ? "Ver Fotos" : "Ver Detalles"}
-                                </Button>
-                            </div>
-                        </div>
+        <section id="cabins" className={`section-space ${styles.stays}`}>
+            <div className="wrap">
+                <header className={styles.heading}>
+                    <h2 className="section-title">Dúplex, lodges y estudios</h2>
+                    <p>Opciones para 1 a 6 personas en Puerto Iguazú.</p>
+                </header>
+
+                <div className={styles.filterBar} role="group" aria-label="Tipo de alojamiento">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            type="button"
+                            aria-pressed={selectedCategory === category}
+                            onClick={() => setSelectedCategory(category)}
+                        >
+                            {category}
+                        </button>
                     ))}
                 </div>
+                <div className={styles.stayGrid}>
+                    {visibleCabins.map((cabin) => {
+                        const isPool = cabin.id === 12;
+
+                        return (
+                            <Dialog key={cabin.id}>
+                                <article className={styles.stayCard}>
+                                    <div className={styles.stayPhoto}>
+                                        <Image
+                                            src={`/images/alojamientos/${cabin.id}.webp`}
+                                            alt={cabin.name}
+                                            fill
+                                            sizes="(min-width: 960px) 30vw, (min-width: 650px) 45vw, 90vw"
+                                        />
+                                    </div>
+                                    {!isPool && (
+                                        <span className={styles.rating} aria-label={'Calificación: ' + cabin.rating + ' de 5'}>
+                                            <Star aria-hidden="true" size={13} /> {cabin.rating}
+                                        </span>
+                                    )}
+                                    <div className={styles.stayBody}>
+                                        <div className={styles.stayName}>
+                                            <h3>{cabin.name}</h3>
+                                            <p className={styles.stayDescription}>{cabin.description}</p>
+                                            {!isPool && (
+                                                <p className={styles.facts}>
+                                                    <span><Users aria-hidden="true" size={16} /> {cabin.capacity}</span>
+                                                    <span><Maximize2 aria-hidden="true" size={14} /> {cabin.size}</span>
+                                                </p>
+                                            )}
+                                        </div>
+                                        <DialogTrigger asChild>
+                                            <button
+                                                type="button"
+                                                className={styles.stayLink}
+                                                aria-label={isPool ? 'Ver fotos de la piscina' : `Ver detalles de ${cabin.name}`}
+                                            >
+                                                <ArrowUpRight aria-hidden="true" size={17} />
+                                            </button>
+                                        </DialogTrigger>
+                                    </div>
+                                </article>
+                                <CabinModal cabin={cabin} />
+                            </Dialog>
+                        );
+                    })}
+                </div>
             </div>
-
-            {cabins.map((cabin) => (
-                <Dialog key={cabin.id} open={openModal === cabin.id} onOpenChange={handleCloseModal}>
-                    <CabinModal cabin={cabin} onClose={handleCloseModal} />
-                </Dialog>
-            ))}
         </section>
-    )
+    );
 }
-
-export default Cabins

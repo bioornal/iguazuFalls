@@ -1,123 +1,69 @@
-import React, { useState } from 'react'
-import { Button } from "@/components/ui/Button"
-import { Input } from "@/components/ui/Input"
-import { Phone, MapPin, Mail, Send, Clock, Calendar, CreditCard, HelpCircle } from "lucide-react"
+'use client'
+
+import { ArrowUpRight, Mail, MessageCircle, Phone } from 'lucide-react'
+import { EMAIL, EMAIL_HREF, OPENING_HOURS, PHONE_DISPLAY, PHONE_HREF, waLink } from '@/lib/site'
+import styles from './Visit.module.css'
+
+const channels = [
+  { label: 'WhatsApp', detail: 'Consultá fechas y tarifas', href: waLink(), icon: MessageCircle, external: true },
+  { label: 'Teléfono', detail: PHONE_DISPLAY, href: PHONE_HREF, icon: Phone },
+  { label: 'Correo electrónico', detail: EMAIL, href: EMAIL_HREF, icon: Mail },
+]
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const { name, email, message } = formData
-    const mailtoLink = `mailto:iguazufallslodge@gmail.com?subject=Nuevo mensaje de ${name}&body=${message}%0D%0A%0D%0AEmail de contacto: ${email}`
-    window.location.href = mailtoLink
+  function handleSubmit(event) {
+    event.preventDefault()
+    const form = new FormData(event.currentTarget)
+    const subject = encodeURIComponent(`Consulta de ${form.get('name').trim()}`)
+    const body = encodeURIComponent(`${form.get('message').trim()}\n\nEmail de contacto: ${form.get('email').trim()}`)
+    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`
   }
 
   return (
-    <div className="w-full bg-gray-800 text-white py-20 mt-12">
-      <div className="container mx-auto px-4">
-        <h2 className="section-title text-center md:text-left mb-12 text-gray-50 bg-green-400 py-2 px-4 rounded-lg">
-          Contacto y ubicación
-        </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Formulario de contacto */}
-          <div className="bg-white text-green-800 rounded-xl shadow-xl p-6">
-            <h3 className="subsection-title mb-4">Envíanos un Mensaje</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <Input
-                name="name"
-                className="w-full border-2 border-green-500 focus:border-yellow-500"
-                placeholder="Tu nombre"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-              <Input
-                name="email"
-                type="email"
-                className="w-full border-2 border-green-500 focus:border-yellow-500"
-                placeholder="Tu email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-              <textarea
-                name="message"
-                className="w-full p-2 rounded-md border-2 border-green-500 focus:border-yellow-500 resize-none"
-                placeholder="Tu mensaje"
-                rows={3}
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-              <Button
-                type="submit"
-                className="w-full bg-yellow-500 text-green-900 hover:bg-yellow-400 flex items-center justify-center"
-              >
-                <Send className="mr-2 h-4 w-4" />
-                Enviar
-              </Button>
-            </form>
-          </div>
-
-          {/* Información de contacto */}
-          <div className="bg-white text-green-800 rounded-xl shadow-xl p-6">
-            <h3 className="subsection-title mb-4">Información de Contacto</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <Phone className="h-5 w-5 text-yellow-500" />
-                <span>+54 3757 570534</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-5 w-5 text-yellow-500" />
-                <span>Iguazú, Misiones, Argentina</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-5 w-5 text-yellow-500" />
-                <span>iguazufallslodge@gmail.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Clock className="h-5 w-5 text-yellow-500" />
-                <span>Lun - Dom: 7:00 - 22:00 hs</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Información adicional */}
-          <div className="bg-white text-green-800 rounded-xl shadow-xl p-6">
-            <h3 className="subsection-title mb-4">Información Adicional</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <Calendar className="h-5 w-5 text-yellow-500" />
-                <span>Check-in: 14:00 - Check-out: 10:00 hs</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CreditCard className="h-5 w-5 text-yellow-500" />
-                <span>Aceptamos tarjetas principales</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <HelpCircle className="h-5 w-5 text-yellow-500" />
-                <span>Atención permanente</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <HelpCircle className="h-5 w-5 text-yellow-500" />
-                <span>Pileta habilitada 365 dias del año</span>
-              </div>
-            </div>
-          </div>
+    <div className="wrap section-space">
+      <div className={styles.contactGrid}>
+        <div>
+          <h2 className="section-title">Contacto</h2>
+          <p className={styles.intro}>¿Tenés fechas en mente? Contanos cuántas personas viajan y te contamos qué opciones hay.</p>
+          <ul className={styles.contactChannels} aria-label="Canales de contacto">
+            {channels.map(({ label, detail, href, icon: Icon, external }) => (
+              <li key={label}>
+                <a href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
+                  <Icon aria-hidden="true" size={21} strokeWidth={1.7} />
+                  <span><strong>{label}</strong><small>{detail}</small></span>
+                  <ArrowUpRight aria-hidden="true" size={17} />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <dl className={styles.contactMeta}>
+            <div><dt>Horario de contacto</dt><dd>{OPENING_HOURS}</dd></div>
+            <div><dt>Medios de pago</dt><dd>Aceptamos las principales tarjetas</dd></div>
+          </dl>
         </div>
+        <form action={EMAIL_HREF} onSubmit={handleSubmit} className={styles.form} aria-describedby="contact-email-note">
+          <h3 className={styles.formTitle}>Escribinos por correo</h3>
+          <div className={styles.formRow}>
+            <label>
+              Nombre
+              <input name="name" autoComplete="name" required />
+            </label>
+            <label>
+              Correo electrónico
+              <input name="email" type="email" autoComplete="email" required />
+            </label>
+          </div>
+          <label>
+            Mensaje
+            <textarea name="message" rows={4} required />
+          </label>
+          <div className={styles.formActions}>
+            <button type="submit" className="button">
+              Preparar correo <ArrowUpRight aria-hidden="true" size={17} />
+            </button>
+            <p id="contact-email-note" className={styles.note}>Se abre un borrador en tu aplicación de correo.</p>
+          </div>
+        </form>
       </div>
     </div>
   )
